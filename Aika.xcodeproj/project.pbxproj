@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC4CA3C32639A2E3002F5C87 /* BubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3C22639A2E3002F5C87 /* BubbleShape.swift */; };
+		BC4CA3C72639AF1D002F5C87 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3C62639AF1D002F5C87 /* MainViewController.swift */; };
+		BC4CA3CA2639AF44002F5C87 /* SpeechRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3C92639AF44002F5C87 /* SpeechRecognition.swift */; };
+		BC4CA3CE2639AF4E002F5C87 /* FaceRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3CD2639AF4E002F5C87 /* FaceRecognition.swift */; };
+		BC70A5EB2638FD72003624FE /* WaveFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70A5EA2638FD72003624FE /* WaveFormView.swift */; };
+		BCAA01CC2637B72C00A83C22 /* SpeechAnalyzerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAA01CB2637B72C00A83C22 /* SpeechAnalyzerVC.swift */; };
+		BCAA01D02637B7C900A83C22 /* EmotionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BCAA01CF2637B7C900A83C22 /* EmotionModel.mlmodel */; };
+		BCDBD7262637A58100072DB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDBD7252637A58100072DB5 /* AppDelegate.swift */; };
+		BCDBD7282637A58100072DB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDBD7272637A58100072DB5 /* SceneDelegate.swift */; };
+		BCDBD72A2637A58100072DB5 /* FaceRecognitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDBD7292637A58100072DB5 /* FaceRecognitionVC.swift */; };
+		BCDBD72D2637A58100072DB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCDBD72B2637A58100072DB5 /* Main.storyboard */; };
+		BCDBD72F2637A58200072DB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCDBD72E2637A58200072DB5 /* Assets.xcassets */; };
+		BCDBD7322637A58200072DB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCDBD7302637A58200072DB5 /* LaunchScreen.storyboard */; };
+		BCDBD73E2637B51700072DB5 /* SpeechRecognitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDBD73D2637B51700072DB5 /* SpeechRecognitionVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BC4CA3C22639A2E3002F5C87 /* BubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleShape.swift; sourceTree = "<group>"; };
+		BC4CA3C62639AF1D002F5C87 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BC4CA3C92639AF44002F5C87 /* SpeechRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognition.swift; sourceTree = "<group>"; };
+		BC4CA3CD2639AF4E002F5C87 /* FaceRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognition.swift; sourceTree = "<group>"; };
+		BC70A5EA2638FD72003624FE /* WaveFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveFormView.swift; sourceTree = "<group>"; };
+		BCAA01CB2637B72C00A83C22 /* SpeechAnalyzerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechAnalyzerVC.swift; sourceTree = "<group>"; };
+		BCAA01CF2637B7C900A83C22 /* EmotionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EmotionModel.mlmodel; sourceTree = "<group>"; };
+		BCDBD7222637A58100072DB5 /* Aika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aika.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCDBD7252637A58100072DB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BCDBD7272637A58100072DB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BCDBD7292637A58100072DB5 /* FaceRecognitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognitionVC.swift; sourceTree = "<group>"; };
+		BCDBD72C2637A58100072DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BCDBD72E2637A58200072DB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCDBD7312637A58200072DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BCDBD7332637A58200072DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCDBD73D2637B51700072DB5 /* SpeechRecognitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCDBD71F2637A58100072DB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC4CA3D12639AF65002F5C87 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				BC4CA3C22639A2E3002F5C87 /* BubbleShape.swift */,
+				BC70A5EA2638FD72003624FE /* WaveFormView.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		BCDBD7192637A58100072DB5 = {
+			isa = PBXGroup;
+			children = (
+				BCDBD7242637A58100072DB5 /* Aika */,
+				BCDBD7232637A58100072DB5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCDBD7232637A58100072DB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCDBD7222637A58100072DB5 /* Aika.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCDBD7242637A58100072DB5 /* Aika */ = {
+			isa = PBXGroup;
+			children = (
+				BC4CA3D12639AF65002F5C87 /* New Group */,
+				BCDBD7252637A58100072DB5 /* AppDelegate.swift */,
+				BCAA01CF2637B7C900A83C22 /* EmotionModel.mlmodel */,
+				BCDBD7272637A58100072DB5 /* SceneDelegate.swift */,
+				BCDBD7292637A58100072DB5 /* FaceRecognitionVC.swift */,
+				BCDBD72B2637A58100072DB5 /* Main.storyboard */,
+				BCDBD72E2637A58200072DB5 /* Assets.xcassets */,
+				BCDBD7302637A58200072DB5 /* LaunchScreen.storyboard */,
+				BCDBD7332637A58200072DB5 /* Info.plist */,
+				BCAA01CB2637B72C00A83C22 /* SpeechAnalyzerVC.swift */,
+				BCDBD73D2637B51700072DB5 /* SpeechRecognitionVC.swift */,
+				BC4CA3C92639AF44002F5C87 /* SpeechRecognition.swift */,
+				BC4CA3CD2639AF4E002F5C87 /* FaceRecognition.swift */,
+				BC4CA3C62639AF1D002F5C87 /* MainViewController.swift */,
+			);
+			path = Aika;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCDBD7212637A58100072DB5 /* Aika */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCDBD7362637A58200072DB5 /* Build configuration list for PBXNativeTarget "Aika" */;
+			buildPhases = (
+				BCDBD71E2637A58100072DB5 /* Sources */,
+				BCDBD71F2637A58100072DB5 /* Frameworks */,
+				BCDBD7202637A58100072DB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Aika;
+			productName = Aika;
+			productReference = BCDBD7222637A58100072DB5 /* Aika.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCDBD71A2637A58100072DB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					BCDBD7212637A58100072DB5 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = BCDBD71D2637A58100072DB5 /* Build configuration list for PBXProject "Aika" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCDBD7192637A58100072DB5;
+			productRefGroup = BCDBD7232637A58100072DB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCDBD7212637A58100072DB5 /* Aika */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCDBD7202637A58100072DB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCDBD7322637A58200072DB5 /* LaunchScreen.storyboard in Resources */,
+				BCDBD72F2637A58200072DB5 /* Assets.xcassets in Resources */,
+				BCDBD72D2637A58100072DB5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCDBD71E2637A58100072DB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCDBD72A2637A58100072DB5 /* FaceRecognitionVC.swift in Sources */,
+				BCAA01CC2637B72C00A83C22 /* SpeechAnalyzerVC.swift in Sources */,
+				BC70A5EB2638FD72003624FE /* WaveFormView.swift in Sources */,
+				BCDBD7262637A58100072DB5 /* AppDelegate.swift in Sources */,
+				BCDBD73E2637B51700072DB5 /* SpeechRecognitionVC.swift in Sources */,
+				BC4CA3CA2639AF44002F5C87 /* SpeechRecognition.swift in Sources */,
+				BCAA01D02637B7C900A83C22 /* EmotionModel.mlmodel in Sources */,
+				BC4CA3C72639AF1D002F5C87 /* MainViewController.swift in Sources */,
+				BC4CA3C32639A2E3002F5C87 /* BubbleShape.swift in Sources */,
+				BCDBD7282637A58100072DB5 /* SceneDelegate.swift in Sources */,
+				BC4CA3CE2639AF4E002F5C87 /* FaceRecognition.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BCDBD72B2637A58100072DB5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCDBD72C2637A58100072DB5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BCDBD7302637A58200072DB5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCDBD7312637A58200072DB5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BCDBD7342637A58200072DB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BCDBD7352637A58200072DB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCDBD7372637A58200072DB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YU42ADAZ46;
+				INFOPLIST_FILE = Aika/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.kyald.Aika;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BCDBD7382637A58200072DB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YU42ADAZ46;
+				INFOPLIST_FILE = Aika/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.kyald.Aika;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCDBD71D2637A58100072DB5 /* Build configuration list for PBXProject "Aika" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCDBD7342637A58200072DB5 /* Debug */,
+				BCDBD7352637A58200072DB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCDBD7362637A58200072DB5 /* Build configuration list for PBXNativeTarget "Aika" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCDBD7372637A58200072DB5 /* Debug */,
+				BCDBD7382637A58200072DB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCDBD71A2637A58100072DB5 /* Project object */;
+}
