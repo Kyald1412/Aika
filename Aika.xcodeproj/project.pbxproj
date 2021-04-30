@@ -7,39 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC21704F263A5CEC00651C64 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21704E263A5CEC00651C64 /* ResultViewController.swift */; };
 		BC4CA3C32639A2E3002F5C87 /* BubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3C22639A2E3002F5C87 /* BubbleShape.swift */; };
 		BC4CA3C72639AF1D002F5C87 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3C62639AF1D002F5C87 /* MainViewController.swift */; };
 		BC4CA3CA2639AF44002F5C87 /* SpeechRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3C92639AF44002F5C87 /* SpeechRecognition.swift */; };
 		BC4CA3CE2639AF4E002F5C87 /* FaceRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3CD2639AF4E002F5C87 /* FaceRecognition.swift */; };
 		BC70A5EB2638FD72003624FE /* WaveFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70A5EA2638FD72003624FE /* WaveFormView.swift */; };
-		BCAA01CC2637B72C00A83C22 /* SpeechAnalyzerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAA01CB2637B72C00A83C22 /* SpeechAnalyzerVC.swift */; };
+		BC9442F1263A678000D08FF0 /* MainInitialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9442F0263A678000D08FF0 /* MainInitialize.swift */; };
 		BCAA01D02637B7C900A83C22 /* EmotionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BCAA01CF2637B7C900A83C22 /* EmotionModel.mlmodel */; };
 		BCDBD7262637A58100072DB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDBD7252637A58100072DB5 /* AppDelegate.swift */; };
 		BCDBD7282637A58100072DB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDBD7272637A58100072DB5 /* SceneDelegate.swift */; };
-		BCDBD72A2637A58100072DB5 /* FaceRecognitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDBD7292637A58100072DB5 /* FaceRecognitionVC.swift */; };
 		BCDBD72D2637A58100072DB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCDBD72B2637A58100072DB5 /* Main.storyboard */; };
 		BCDBD72F2637A58200072DB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCDBD72E2637A58200072DB5 /* Assets.xcassets */; };
 		BCDBD7322637A58200072DB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCDBD7302637A58200072DB5 /* LaunchScreen.storyboard */; };
-		BCDBD73E2637B51700072DB5 /* SpeechRecognitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDBD73D2637B51700072DB5 /* SpeechRecognitionVC.swift */; };
+		BCE711CD263A526C00DCEA75 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE711CC263A526C00DCEA75 /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC21704E263A5CEC00651C64 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		BC4CA3C22639A2E3002F5C87 /* BubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleShape.swift; sourceTree = "<group>"; };
 		BC4CA3C62639AF1D002F5C87 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BC4CA3C92639AF44002F5C87 /* SpeechRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognition.swift; sourceTree = "<group>"; };
 		BC4CA3CD2639AF4E002F5C87 /* FaceRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognition.swift; sourceTree = "<group>"; };
 		BC70A5EA2638FD72003624FE /* WaveFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveFormView.swift; sourceTree = "<group>"; };
-		BCAA01CB2637B72C00A83C22 /* SpeechAnalyzerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechAnalyzerVC.swift; sourceTree = "<group>"; };
+		BC9442F0263A678000D08FF0 /* MainInitialize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInitialize.swift; sourceTree = "<group>"; };
 		BCAA01CF2637B7C900A83C22 /* EmotionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EmotionModel.mlmodel; sourceTree = "<group>"; };
 		BCDBD7222637A58100072DB5 /* Aika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCDBD7252637A58100072DB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCDBD7272637A58100072DB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BCDBD7292637A58100072DB5 /* FaceRecognitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognitionVC.swift; sourceTree = "<group>"; };
 		BCDBD72C2637A58100072DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCDBD72E2637A58200072DB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCDBD7312637A58200072DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCDBD7332637A58200072DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCDBD73D2637B51700072DB5 /* SpeechRecognitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionVC.swift; sourceTree = "<group>"; };
+		BCE711CC263A526C00DCEA75 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,13 +53,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BC4CA3D12639AF65002F5C87 /* New Group */ = {
+		BC4CA3D12639AF65002F5C87 /* Utilites */ = {
 			isa = PBXGroup;
 			children = (
 				BC4CA3C22639A2E3002F5C87 /* BubbleShape.swift */,
+				BCE711CC263A526C00DCEA75 /* UIButton+Extension.swift */,
 				BC70A5EA2638FD72003624FE /* WaveFormView.swift */,
 			);
-			path = "New Group";
+			path = Utilites;
+			sourceTree = "<group>";
+		};
+		BC9442EF263A677900D08FF0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BC4CA3C92639AF44002F5C87 /* SpeechRecognition.swift */,
+				BC4CA3CD2639AF4E002F5C87 /* FaceRecognition.swift */,
+				BC9442F0263A678000D08FF0 /* MainInitialize.swift */,
+				BC4CA3C62639AF1D002F5C87 /* MainViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		BCDBD7192637A58100072DB5 = {
@@ -81,22 +93,42 @@
 		BCDBD7242637A58100072DB5 /* Aika */ = {
 			isa = PBXGroup;
 			children = (
-				BC4CA3D12639AF65002F5C87 /* New Group */,
-				BCDBD7252637A58100072DB5 /* AppDelegate.swift */,
+				BCE8CAC7263A4DC500BC2368 /* App */,
+				BCE8CAC8263A4DD100BC2368 /* Controller */,
+				BCE8CAC6263A4DB300BC2368 /* Resources */,
+				BC4CA3D12639AF65002F5C87 /* Utilites */,
+				BCDBD7332637A58200072DB5 /* Info.plist */,
+			);
+			path = Aika;
+			sourceTree = "<group>";
+		};
+		BCE8CAC6263A4DB300BC2368 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				BCAA01CF2637B7C900A83C22 /* EmotionModel.mlmodel */,
-				BCDBD7272637A58100072DB5 /* SceneDelegate.swift */,
-				BCDBD7292637A58100072DB5 /* FaceRecognitionVC.swift */,
 				BCDBD72B2637A58100072DB5 /* Main.storyboard */,
 				BCDBD72E2637A58200072DB5 /* Assets.xcassets */,
 				BCDBD7302637A58200072DB5 /* LaunchScreen.storyboard */,
-				BCDBD7332637A58200072DB5 /* Info.plist */,
-				BCAA01CB2637B72C00A83C22 /* SpeechAnalyzerVC.swift */,
-				BCDBD73D2637B51700072DB5 /* SpeechRecognitionVC.swift */,
-				BC4CA3C92639AF44002F5C87 /* SpeechRecognition.swift */,
-				BC4CA3CD2639AF4E002F5C87 /* FaceRecognition.swift */,
-				BC4CA3C62639AF1D002F5C87 /* MainViewController.swift */,
 			);
-			path = Aika;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BCE8CAC7263A4DC500BC2368 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BCDBD7252637A58100072DB5 /* AppDelegate.swift */,
+				BCDBD7272637A58100072DB5 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BCE8CAC8263A4DD100BC2368 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC9442EF263A677900D08FF0 /* Main */,
+				BC21704E263A5CEC00651C64 /* ResultViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,13 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCDBD72A2637A58100072DB5 /* FaceRecognitionVC.swift in Sources */,
-				BCAA01CC2637B72C00A83C22 /* SpeechAnalyzerVC.swift in Sources */,
+				BC21704F263A5CEC00651C64 /* ResultViewController.swift in Sources */,
 				BC70A5EB2638FD72003624FE /* WaveFormView.swift in Sources */,
 				BCDBD7262637A58100072DB5 /* AppDelegate.swift in Sources */,
-				BCDBD73E2637B51700072DB5 /* SpeechRecognitionVC.swift in Sources */,
 				BC4CA3CA2639AF44002F5C87 /* SpeechRecognition.swift in Sources */,
 				BCAA01D02637B7C900A83C22 /* EmotionModel.mlmodel in Sources */,
+				BC9442F1263A678000D08FF0 /* MainInitialize.swift in Sources */,
+				BCE711CD263A526C00DCEA75 /* UIButton+Extension.swift in Sources */,
 				BC4CA3C72639AF1D002F5C87 /* MainViewController.swift in Sources */,
 				BC4CA3C32639A2E3002F5C87 /* BubbleShape.swift in Sources */,
 				BCDBD7282637A58100072DB5 /* SceneDelegate.swift in Sources */,

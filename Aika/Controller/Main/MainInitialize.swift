@@ -10,29 +10,7 @@ import Speech
 import SoundAnalysis
 import ARKit
 
-class MainViewController: UIViewController {
-
-    @IBOutlet weak var lblAikaMain: UILabel!
-    @IBOutlet weak var lblSpeechRecognizer: UILabel!
-    @IBOutlet weak var waveForm: WaveFormView!
-    @IBOutlet weak var icAika: UIImageView!
-    @IBOutlet var sceneView: ARSCNView!
-
-    var recordingSession: AVAudioSession!
-    var audioRecorder: AVAudioRecorder!
-    let audioEngine = AVAudioEngine()
-    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
-    let request = SFSpeechAudioBufferRecognitionRequest()
-    var recognitionTask: SFSpeechRecognitionTask?
-    var isRecording = false
-    var analysis = ""
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        initSpeechRecognition()
-        initFaceRecognition()
-    }
+extension MainViewController {
     
     func initFaceRecognition(){
         sceneView.delegate = self
@@ -45,7 +23,6 @@ class MainViewController: UIViewController {
     
     func initSpeechRecognition(){
         recordingSession = AVAudioSession.sharedInstance()
-        
         requestSpeechAuthorization()
     }
 
@@ -90,12 +67,4 @@ class MainViewController: UIViewController {
             }
         }
     }
-    
-    //MARK: - Alert
-    func sendAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
 }

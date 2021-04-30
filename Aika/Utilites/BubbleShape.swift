@@ -63,6 +63,7 @@ import UIKit
     enum ArrowDirection: String { // 1
         case left = "left"
         case right = "right"
+        case none = "none"
     }
     
     var arrowDirection: ArrowDirection = .right { // 2
@@ -84,7 +85,7 @@ import UIKit
 
     
     override func draw(_ rect: CGRect) {
-        let bezierPath = UIBezierPath()
+        var bezierPath = UIBezierPath()
         bezierPath.lineWidth = borderWidth // 3
         
         let bottom = rect.height - borderWidth // 4
@@ -107,7 +108,7 @@ import UIKit
             bezierPath.addCurve(to: CGPoint(x: right - 11.04, y: bottom - 4.04), controlPoint1: CGPoint(x: right - 4.07, y: bottom + 0.43), controlPoint2: CGPoint(x: right - 8.16, y: bottom - 1.06))
             bezierPath.addCurve(to: CGPoint(x: right - 22, y: bottom), controlPoint1: CGPoint(x: right - 16, y: bottom), controlPoint2: CGPoint(x: right - 19, y: bottom))
             
-        } else {
+        } else if arrowDirection == .left { // 4
             bezierPath.move(to: CGPoint(x: 22 + borderWidth, y: bottom)) // 5
             bezierPath.addLine(to: CGPoint(x: right - 17, y: bottom))
             bezierPath.addCurve(to: CGPoint(x: right, y: bottom - 17), controlPoint1: CGPoint(x: right - 7.61, y: bottom), controlPoint2: CGPoint(x: right, y: bottom - 7.61))
@@ -121,6 +122,10 @@ import UIKit
             bezierPath.addCurve(to: CGPoint(x: borderWidth + 11.04, y: bottom - 4.04), controlPoint1: CGPoint(x: borderWidth + 4.07, y: bottom + 0.43), controlPoint2: CGPoint(x: borderWidth + 8.16, y: bottom - 1.06))
             bezierPath.addCurve(to: CGPoint(x: borderWidth + 22, y: bottom), controlPoint1: CGPoint(x: borderWidth + 16, y: bottom), controlPoint2: CGPoint(x: borderWidth + 19, y: bottom))
             
+        } else {
+            bezierPath = UIBezierPath(roundedRect: self.bounds,
+                                    byRoundingCorners: [.topLeft, .bottomRight, .topRight, .bottomLeft],
+                                    cornerRadii: CGSize(width: 15.0, height: 0.0))
         }
         
         bezierPath.close()
@@ -128,7 +133,7 @@ import UIKit
         let gradient = CAGradientLayer()
         gradient.frame = bezierPath.bounds
         gradient.colors = [startColor.cgColor, endColor.cgColor]
-        gradient.type = .axial
+//        gradient.type = .axial
 
         let shapeMask = CAShapeLayer()
         shapeMask.path = bezierPath.cgPath
@@ -136,8 +141,8 @@ import UIKit
         gradient.mask = shapeMask
         self.layer.addSublayer(gradient)
 //        backgroundColor?.setFill()
-        borderColor.setStroke() // 6
-        bezierPath.fill()
-        bezierPath.stroke()
+//        borderColor.setStroke() // 6
+//        bezierPath.fill()
+//        bezierPath.stroke()
     }
 }
