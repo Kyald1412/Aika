@@ -7,10 +7,10 @@
 
 import UIKit
 
-@IBDesignable class BubbleShapeView: UIView { // 1
+@IBDesignable class BubbleShapeView: UIView {
     
     
-    override init(frame: CGRect) { // 2
+    override init(frame: CGRect) {
         super.init(frame: frame)
         
         commonInit()
@@ -23,56 +23,56 @@ import UIKit
     }
     
     private func commonInit() {
-        super.backgroundColor = .clear // 3
+        super.backgroundColor = .clear
     }
     
-    private var bubbleColor: UIColor? { // 4
+    private var bubbleColor: UIColor? {
         didSet {
-            setNeedsDisplay() // 5
+            setNeedsDisplay()
         }
     }
     
-    override var backgroundColor: UIColor? { // 6
+    override var backgroundColor: UIColor? {
         get { return .clear }
         set { bubbleColor = .clear }
     }
     
-    @IBInspectable var borderWidth: CGFloat = 0 { // 1
+    @IBInspectable var borderWidth: CGFloat = 0 {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    @IBInspectable var borderColor: UIColor = .clear { // 2
+    @IBInspectable var borderColor: UIColor = .clear {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    @IBInspectable var startColor: UIColor = .clear { // 2
+    @IBInspectable var startColor: UIColor = .clear {
         didSet {
             setNeedsDisplay()
         }
     }
-    @IBInspectable var endColor: UIColor = .clear { // 2
+    @IBInspectable var endColor: UIColor = .clear {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    enum ArrowDirection: String { // 1
+    enum ArrowDirection: String {
         case left = "left"
         case right = "right"
         case none = "none"
     }
     
-    var arrowDirection: ArrowDirection = .right { // 2
+    var arrowDirection: ArrowDirection = .right {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    @IBInspectable var arrowDirectionIB: String { // 3
+    @IBInspectable var arrowDirectionIB: String {
         get {
             return arrowDirection.rawValue
         }
@@ -86,14 +86,14 @@ import UIKit
     
     override func draw(_ rect: CGRect) {
         var bezierPath = UIBezierPath()
-        bezierPath.lineWidth = borderWidth // 3
+        bezierPath.lineWidth = borderWidth
         
-        let bottom = rect.height - borderWidth // 4
+        let bottom = rect.height - borderWidth
         let right = rect.width - borderWidth
         let top = borderWidth
         let left = borderWidth
-        
-        if arrowDirection == .right { // 4
+    
+        if arrowDirection == .right {
             
             bezierPath.move(to: CGPoint(x: right - 22, y: bottom)) // 5
             bezierPath.addLine(to: CGPoint(x: 17 + borderWidth, y: bottom))
@@ -108,8 +108,8 @@ import UIKit
             bezierPath.addCurve(to: CGPoint(x: right - 11.04, y: bottom - 4.04), controlPoint1: CGPoint(x: right - 4.07, y: bottom + 0.43), controlPoint2: CGPoint(x: right - 8.16, y: bottom - 1.06))
             bezierPath.addCurve(to: CGPoint(x: right - 22, y: bottom), controlPoint1: CGPoint(x: right - 16, y: bottom), controlPoint2: CGPoint(x: right - 19, y: bottom))
             
-        } else if arrowDirection == .left { // 4
-            bezierPath.move(to: CGPoint(x: 22 + borderWidth, y: bottom)) // 5
+        } else if arrowDirection == .left {
+            bezierPath.move(to: CGPoint(x: 22 + borderWidth, y: bottom))
             bezierPath.addLine(to: CGPoint(x: right - 17, y: bottom))
             bezierPath.addCurve(to: CGPoint(x: right, y: bottom - 17), controlPoint1: CGPoint(x: right - 7.61, y: bottom), controlPoint2: CGPoint(x: right, y: bottom - 7.61))
             bezierPath.addLine(to: CGPoint(x: right, y: 17 + borderWidth))
@@ -133,16 +133,11 @@ import UIKit
         let gradient = CAGradientLayer()
         gradient.frame = bezierPath.bounds
         gradient.colors = [startColor.cgColor, endColor.cgColor]
-//        gradient.type = .axial
 
         let shapeMask = CAShapeLayer()
         shapeMask.path = bezierPath.cgPath
 
         gradient.mask = shapeMask
         self.layer.addSublayer(gradient)
-//        backgroundColor?.setFill()
-//        borderColor.setStroke() // 6
-//        bezierPath.fill()
-//        bezierPath.stroke()
     }
 }

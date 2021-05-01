@@ -8,9 +8,10 @@
 import Foundation
 
 struct Expression {
-    let lookOut = 0.0
-    let smiling = 0.0
-    let focused = 0.0
-    let neutral = 0.0
-    let speechText = ""
+    var lookOut = 0.0
+    var smiling = 0.0
+    var focused = 0.0
+    var neutral = 0.0
+    var timeSpeaking = ""
+    var speechText = ""
 }

@@ -16,10 +16,10 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
             cancelRecording()
             isRecording = false
             audioRecorder.stop()
-            levelTimer.invalidate()
+            waveFormTimer?.invalidate()
             silenceTimer = 0
         } else {
-            self.recordAndRecognizeSpeech()
+            
             isRecording = true
             
             let settings = [
@@ -29,7 +29,7 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
                 AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
             ]
             
-            let diplayLink = CADisplayLink(target: self, selector: #selector(updateMeters))
+            let diplayLink = CADisplayLink(target: self, selector: #selector(updateWaveForm))
             diplayLink.add(to: .current, forMode: .common)
             
             let url = URL.init(fileURLWithPath: "/dev/null")
@@ -42,7 +42,9 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
                 audioRecorder.isMeteringEnabled = true
                 audioRecorder.record()
                 
-                levelTimer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(levelTimerCallback), userInfo: nil, repeats: true)
+                waveFormTimer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(dbLevelUpdate), userInfo: nil, repeats: true)
+                
+                self.recordAndRecognizeSpeech()
                 
             } catch {
                 //finishRecording(success: false)
@@ -52,14 +54,14 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
         }
     }
     
-    @objc func levelTimerCallback(timer: Timer) {
+    @objc func dbLevelUpdate(timer: Timer) {
         
         if self.audioRecorder != nil {
             let ALPHA: Float = 0.05
             let peakPowerForChannel = pow(10, (0.05 * self.audioRecorder.peakPower(forChannel: 0)))
             lowPassResults = ALPHA * peakPowerForChannel + ( 1.0 - ALPHA) * lowPassResults
             
-            if lowPassResults < 0.1 {
+            if lowPassResults < Constants.dbThreshold {
                 if self.lblSpeechRecognizer.text?.count ?? 0 > 0 {
                     self.silenceTimer += ALPHA
                 }
@@ -67,9 +69,8 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
                 silenceTimer = 0
             }
             
-            self.checkCurrentTask()
-            
-            print("CURRENT SILENCE TIMER \(silenceTimer)")
+            self.checkCurrentSpeechTask()
+
         }
     }
     
@@ -79,7 +80,7 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
             isRecording = false
             
             audioRecorder.stop()
-            levelTimer.invalidate()
+            waveFormTimer?.invalidate()
             silenceTimer = 0
             
             // stop audio
@@ -87,21 +88,15 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
             audioEngine.stop()
             audioEngine.inputNode.removeTap(onBus: 0)
             
-            DispatchQueue.main.async { [unowned self] in
-                guard let task = self.recognitionTask else {
-                    fatalError("Error")
-                }
-                task.cancel()
-                task.finish()
-            }
+            recognitionTask?.cancel()
+            recognitionTask?.finish()
+            
         }
         
-        //        recognitionTask?.cancel()
-        //        recognitionTask?.finish()
-        //        recognitionTask = nil
     }
     
-    @objc func updateMeters(){
+    @objc func updateWaveForm(){
+        
         var normalizedValue : CGFloat = 0
         
         self.audioRecorder.updateMeters()
@@ -124,15 +119,17 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
     //MARK: - Recognize Speech
     func recordAndRecognizeSpeech() {
         
-        print("CURRENT TASK AVAIL? \(recognitionTask)")
-        
         if (recognitionTask != nil) {
+            recognitionTask?.cancel()
+            recognitionTask?.finish()
             recognitionTask = nil
         }
-        print("CURRENT TASK AVAIL? 222 \(recognitionTask)")
         
         self.request =  SFSpeechAudioBufferRecognitionRequest()
         let node = audioEngine.inputNode
+        
+        audioEngine.inputNode.removeTap(onBus: 0)
+        
         let recordingFormat = node.outputFormat(forBus: 0)
         node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
             self.request.append(buffer)
@@ -152,61 +149,57 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
             self.sendAlert(title: "Speech Recognizer Error", message: "Speech recognition is not currently available. Check back at a later time.")
             return
         }
-        // Keep speech recognition data on device
-        //                if #available(iOS 13, *) {
-        //                    //recognitionRequest.requiresOnDeviceRecognition = false
-        //                    self.request.requiresOnDeviceRecognition = true
-        //                }
         
-        print("SUPPORT ON DEVICE \(speechRecognizer?.supportsOnDeviceRecognition)")
-        print("AUDIO BUFFER \(self.request)")
         
-        let currentSpeechText = self.lblSpeechRecognizer.text ?? ""
+        if Constants.useOnDeviceRecognition {
+            
+            print("SUPPORT ON DEVICE \(String(describing: speechRecognizer?.supportsOnDeviceRecognition))")
+            
+            // Keep speech recognition data on device
+            if #available(iOS 13, *) {
+                self.request.requiresOnDeviceRecognition = true
+            }
+        }
+        
+        
+        let currentSpeechText = self.speechText
         
         recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { result, error in
             if let result = result {
                 
                 if result.isFinal {
-                    //                    self.sendAlert(title: "Sorry lost connection", message: "Speech recognition is not currently available. Check back at a later time.
+                    // self.sendAlert(title: "Sorry lost connection", message: "Speech recognition is not currently available. Check back at a later time.
                     print("SPEECH IS FINAL")
                     // Add continuation here when speech recognizer break
                 }
                 
                 let bestString = result.bestTranscription.formattedString
-                var lastString: String = ""
-                for segment in result.bestTranscription.segments {
-                    let indexTo = bestString.index(bestString.startIndex, offsetBy: segment.substringRange.location)
-                    lastString = String(bestString[indexTo...])
-                }
                 
-                if self.continueSpeaking == true {
-                    self.lblSpeechRecognizer.text = "\(currentSpeechText) \(bestString)"
-                } else {
-                    self.lblSpeechRecognizer.text = bestString
-                }
-                
+                self.speechText = "\(currentSpeechText) \(bestString)"
+                self.lblSpeechRecognizer.text = self.speechText
                 
             } else if let error = error {
-                self.sendAlert(title: "Speech Recognizer Error", message: "There has been a speech recognition error.")
+                //                self.recordAndRecognizeSpeech()
+                //                self.sendAlert(title: "Speech Recognizer Error", message: "There has been a speech recognition error.")
                 print(error)
             }
         })
     }
     
-    func checkCurrentTask() {
+    func checkCurrentSpeechTask() {
         switch (currentMode) {
         case .groundZero:
             print("groundZero")
         case .initial :
             print("initial")
-            self.initialTaskCheck()
+            self.speechInitialTaskCheck()
         case .taskOption:
             print("task Option")
         case .taskBegin:
             print("task begin")
         case .taskProcess:
             print("task Process")
-            taskProcessCheck()
+            self.speechTaskProcessCheck()
         case .taskDone:
             print("Call Result View Controller here")
         case .taskAnalyze:
@@ -218,7 +211,7 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
         
     }
     
-    func taskProcessCheck(){
+    func speechTaskProcessCheck(){
         if self.lblSpeechRecognizer.text?.count ?? 0 > 0 && silenceTimer > 5 {
             self.cancelRecording()
             self.continueSpeaking = false
@@ -226,12 +219,12 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
         }
     }
     
-    func initialTaskCheck(){
+    func speechInitialTaskCheck(){
         if self.lblSpeechRecognizer.text?.count ?? 0 > 0 && silenceTimer > 2 {
             self.cancelRecording()
             self.currentMode = .taskOption
         }
     }
-    
+  
 }
 

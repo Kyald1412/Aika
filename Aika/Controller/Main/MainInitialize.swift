@@ -34,10 +34,7 @@ extension MainViewController {
             try recordingSession.setActive(true)
             recordingSession.requestRecordPermission() { [unowned self] allowed in
                 DispatchQueue.main.async {
-                    if allowed {
-//                        self.loadRecordingUI()
-//                        self.startRecording()
-                    } else {
+                    if !allowed {
                         self.lblAikaMain.text = "I can't hear you, please allow the permission"
                     }
                 }

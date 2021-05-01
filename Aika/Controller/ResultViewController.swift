@@ -10,4 +10,12 @@ import ARKit
 
 class ResultViewController : UIViewController{
    
+    var expression = Expression()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        print("Exression \(expression)")
+    }
+    
 }

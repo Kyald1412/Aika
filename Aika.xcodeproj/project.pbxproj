@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		BC0AD533263D1C3E0063E2B6 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0AD532263D1C3E0063E2B6 /* InstructionViewController.swift */; };
-		BC0AD537263D238A0063E2B6 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0AD536263D238A0063E2B6 /* CircularProgressView.swift */; };
 		BC0AD53C263D2D430063E2B6 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0AD53B263D2D430063E2B6 /* Expression.swift */; };
 		BC0AD53F263D2D9C0063E2B6 /* MainViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0AD53E263D2D9C0063E2B6 /* MainViewControl.swift */; };
 		BC0AD544263D2E3A0063E2B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0AD543263D2E3A0063E2B6 /* Constants.swift */; };
 		BC21704F263A5CEC00651C64 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21704E263A5CEC00651C64 /* ResultViewController.swift */; };
+		BC3048A8263DBFCD00B9B31C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3048A7263DBFCD00B9B31C /* SettingViewController.swift */; };
+		BC3048AD263DC12000B9B31C /* MainTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3048AC263DC12000B9B31C /* MainTimer.swift */; };
 		BC4CA3C32639A2E3002F5C87 /* BubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3C22639A2E3002F5C87 /* BubbleShape.swift */; };
 		BC4CA3C72639AF1D002F5C87 /* MainControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3C62639AF1D002F5C87 /* MainControl.swift */; };
 		BC4CA3CA2639AF44002F5C87 /* SpeechRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3C92639AF44002F5C87 /* SpeechRecognition.swift */; };
@@ -30,11 +31,12 @@
 
 /* Begin PBXFileReference section */
 		BC0AD532263D1C3E0063E2B6 /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
-		BC0AD536263D238A0063E2B6 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		BC0AD53B263D2D430063E2B6 /* Expression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
 		BC0AD53E263D2D9C0063E2B6 /* MainViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControl.swift; sourceTree = "<group>"; };
 		BC0AD543263D2E3A0063E2B6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BC21704E263A5CEC00651C64 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		BC3048A7263DBFCD00B9B31C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		BC3048AC263DC12000B9B31C /* MainTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTimer.swift; sourceTree = "<group>"; };
 		BC4CA3C22639A2E3002F5C87 /* BubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleShape.swift; sourceTree = "<group>"; };
 		BC4CA3C62639AF1D002F5C87 /* MainControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControl.swift; sourceTree = "<group>"; };
 		BC4CA3C92639AF44002F5C87 /* SpeechRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognition.swift; sourceTree = "<group>"; };
@@ -84,7 +86,6 @@
 			children = (
 				BC4CA3C22639A2E3002F5C87 /* BubbleShape.swift */,
 				BCE711CC263A526C00DCEA75 /* UIButton+Extension.swift */,
-				BC0AD536263D238A0063E2B6 /* CircularProgressView.swift */,
 				BC70A5EA2638FD72003624FE /* WaveFormView.swift */,
 			);
 			path = Utilites;
@@ -97,6 +98,7 @@
 				BC4CA3CD2639AF4E002F5C87 /* FaceRecognition.swift */,
 				BC9442F0263A678000D08FF0 /* MainInitialize.swift */,
 				BC4CA3C62639AF1D002F5C87 /* MainControl.swift */,
+				BC3048AC263DC12000B9B31C /* MainTimer.swift */,
 				BC0AD53E263D2D9C0063E2B6 /* MainViewControl.swift */,
 			);
 			path = Main;
@@ -157,6 +159,7 @@
 				BC0AD53A263D2D3A0063E2B6 /* Models */,
 				BC9442EF263A677900D08FF0 /* Main */,
 				BC0AD532263D1C3E0063E2B6 /* InstructionViewController.swift */,
+				BC3048A7263DBFCD00B9B31C /* SettingViewController.swift */,
 				BC21704E263A5CEC00651C64 /* ResultViewController.swift */,
 			);
 			path = Controller;
@@ -233,7 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC21704F263A5CEC00651C64 /* ResultViewController.swift in Sources */,
+				BC3048AD263DC12000B9B31C /* MainTimer.swift in Sources */,
 				BC70A5EB2638FD72003624FE /* WaveFormView.swift in Sources */,
+				BC3048A8263DBFCD00B9B31C /* SettingViewController.swift in Sources */,
 				BCDBD7262637A58100072DB5 /* AppDelegate.swift in Sources */,
 				BC4CA3CA2639AF44002F5C87 /* SpeechRecognition.swift in Sources */,
 				BCAA01D02637B7C900A83C22 /* EmotionModel.mlmodel in Sources */,
@@ -241,7 +246,6 @@
 				BC9442F1263A678000D08FF0 /* MainInitialize.swift in Sources */,
 				BC0AD544263D2E3A0063E2B6 /* Constants.swift in Sources */,
 				BCE711CD263A526C00DCEA75 /* UIButton+Extension.swift in Sources */,
-				BC0AD537263D238A0063E2B6 /* CircularProgressView.swift in Sources */,
 				BC0AD533263D1C3E0063E2B6 /* InstructionViewController.swift in Sources */,
 				BC0AD53F263D2D9C0063E2B6 /* MainViewControl.swift in Sources */,
 				BC4CA3C72639AF1D002F5C87 /* MainControl.swift in Sources */,
@@ -401,7 +405,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.kyald.Aika;
+				PRODUCT_BUNDLE_IDENTIFIER = co.kyald.Aikas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -420,7 +424,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.kyald.Aika;
+				PRODUCT_BUNDLE_IDENTIFIER = co.kyald.Aikas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

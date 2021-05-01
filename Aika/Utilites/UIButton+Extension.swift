@@ -13,9 +13,9 @@ extension Int {
     func timeFormatted() -> String {
         let seconds: Int = self % 60
         let minutes: Int = (self / 60) % 60
-        //     let hours: Int = totalSeconds / 3600
         return String(format: "%02d:%02d", minutes, seconds)
     }
+    
 }
 
 

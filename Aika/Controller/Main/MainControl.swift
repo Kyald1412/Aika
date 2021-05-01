@@ -60,17 +60,16 @@ extension MainViewController {
     func setupTaskMode(){
         
         self.lblSpeechRecognizer.text = ""
-        
         switch (currentMode) {
         case .groundZero:
             self.lblAikaMain.text = "Hi, how are you today?"
             self.btnOptionListen.borderWidth = 0
             self.btnOptionTrain.setTitle("Start Speaking", for: .normal)
             self.btnOptionListen.setTitle("", for: .normal)
+            self.groundZeroCheck()
         case .initial :
             self.lblAikaMain.text = "Hi, how are you today?"
             self.initSpeechRecognition()
-        //            self.requestSpeechAuthorization()
         case .taskOption:
             self.lblAikaMain.text = "What can I do for you?"
             self.btnOptionTrain.setTitle("Public speaking training", for: .normal)
@@ -81,20 +80,25 @@ extension MainViewController {
             self.btnOptionTrain.setTitle("Ready!", for: .normal)
             self.btnOptionListen.setTitle("No, I changed my mind", for: .normal)
             self.btnOptionListen.borderWidth = 0
+            self.speechText = ""
         case .taskProcess:
-            self.startTimer()
+            if !Constants.useOnDeviceRecognition {
+                self.startSpeechCountdownTimer()
+            }
             self.lblAikaMain.text = "I'm listening, go on!"
             self.requestSpeechAuthorization()
+            self.startExpressionTimer()
         case .taskDone:
             self.lblAikaMain.text = "Are you finished?"
             self.btnOptionTrain.setTitle("Yes!", for: .normal)
             self.btnOptionListen.setTitle("I'm not done yet", for: .normal)
             self.btnOptionListen.borderWidth = 0
             self.cancelRecording()
+            self.stopExpressionTimer()
         case .taskAnalyze:
             self.lblAikaMain.text = "Analyzing your speech..."
             self.cancelRecording()
-//            self.circularProgressBar.progressAnimation(duration: 5)
+            self.stopExpressionTimer()
             self.taskAnalyzeComplete()
         case .showResult:
             print("showResult")
@@ -104,9 +108,9 @@ extension MainViewController {
     }
     
     func setupView(){
-
+        
         self.viewMain.isHidden = false
-
+        
         switch (currentMode) {
         case .groundZero:
             self.viewTaskOption.isHidden = false
@@ -150,6 +154,37 @@ extension MainViewController {
             self.icAika.isHidden = true
             self.viewMain.isHidden = true
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is ResultViewController {
+
+            if let vc = segue.destination as? ResultViewController {
+                vc.expression = self.expression
+            }
+            
+        }
+    }
+    
+    
+    func openResultView(){
+        self.performSegue(withIdentifier: resultSegue, sender: nil)
+    }
+    
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
+
+        if seg.source is ResultViewController {
+            self.currentMode = .groundZero
+        }
+        
+        if seg.source is SettingViewController {
+            self.currentMode = .groundZero
+        }
+        
+        if seg.source is InstructionViewController {
+            
+        }
+        
     }
     
 }

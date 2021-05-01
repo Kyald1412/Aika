@@ -12,6 +12,7 @@ import ARKit
 
 class MainViewController: UIViewController {
     
+    // MARK: IBOutlets
     @IBOutlet weak var lblAikaMain: UILabel!
     @IBOutlet weak var lblSpeechRecognizer: UILabel!
     @IBOutlet weak var waveForm: WaveFormView!
@@ -23,8 +24,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var circularProgressBar: UIView!
     @IBOutlet weak var lblProgress: UILabel!
     
-    @IBOutlet var sceneView: ARSCNView!
-    
     @IBOutlet weak var viewTaskOption: UIView!
     @IBOutlet weak var viewSpeechAnalyzer: UIView!
     @IBOutlet weak var viewTaskAnalyze: UIView!
@@ -33,41 +32,54 @@ class MainViewController: UIViewController {
     @IBOutlet weak var btnOptionListen: DesignableButton!
     
     @IBOutlet weak var lblTimer: UILabel!
-    
+    @IBOutlet var sceneView: ARSCNView!
+
+    // MARK: Audio,Speech,SoundAnalysis
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     let audioEngine = AVAudioEngine()
-    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
+    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
     var request = SFSpeechAudioBufferRecognitionRequest()
     var recognitionTask: SFSpeechRecognitionTask?
+    
+    // MARK: Speech recognition, Audio recording, Speech Analysis
     var isRecording = false
     var analysis = ""
-    var levelTimer = Timer()
-    var lowPassResults: Float = 0.0
-    
-    var countdownTimer: Timer!
-    var totalTime = 60
-    
+    var speechText = ""
     var continueSpeaking = false
     var silenceTimer: Float = 0.0
+    var lowPassResults: Float = 0.0
     
+    // MARK: Face Recognition
+    var expression = Expression()
+    var isSmiling = false
+    var isLookOut = false
+    
+    // MARK: Timers
+    weak var expressionTimer: Timer?
+    weak var waveFormTimer: Timer?
+    weak var speechCountdownTimer: Timer?
+    var expressionStartTime: Double = 0
+    
+    // MARK: Segues
+    let instructionSegue = "showInstructionSegue"
+    let resultSegue = "showResultSegue"
+    
+    // MARK: App Lifecycle
     var currentMode: CurrentMode = .groundZero {
         didSet {
             setupTaskMode()
         }
     }
-    
-    let instructionSegue = "showInstructionSegue"
-    let resultSegue = "showResultSegue"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         initFaceRecognition()
         setupTaskMode()
     }
-    
-    func successAnimation() {
+
+    func progressAnimation() {
         let storkeLayer = CAShapeLayer()
         storkeLayer.fillColor = UIColor.clear.cgColor
         storkeLayer.strokeColor = UIColor.white.cgColor
@@ -89,25 +101,32 @@ class MainViewController: UIViewController {
         storkeLayer.add(animation, forKey: "circleAnimation")
     }
     
-    func successCapturing(){
+    func progressCompleteAnimation(){
         UIView.transition(from: self.circularProgressBar, to: self.imgProgress, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews]) { (bol) in
             self.imgProgress.isHidden = false
         }
     }
     
     func taskAnalyzeComplete(){
+        
+        if !Constants.useOnDeviceRecognition {
+            self.speechCountdownTimer?.invalidate()
+        }
+        
         self.lblProgress.countAnimation(upto: 100)
-        self.countdownTimer.invalidate()
+
         self.lblTimer.text = ""
         
+        self.expression.speechText = self.speechText
+        
+        self.progressAnimation()
+        
         var runCount = 0
-        self.successAnimation()
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-            print("Timer fired!")
             runCount += 1
 
             if runCount == 5 {
-                self.successCapturing()
+                self.progressCompleteAnimation()
             }
             if runCount == 6 {
                 self.openResultView()
@@ -116,26 +135,23 @@ class MainViewController: UIViewController {
             }
         }
     }
-    
-    func openResultView(){
-        self.performSegue(withIdentifier: resultSegue, sender: nil)
-    }
-    
-    func startTimer() {
-        countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-    }
-    
-    @objc func updateTime() {
-        self.lblTimer.text = "\(totalTime.timeFormatted())"
+
+    func groundZeroCheck(){
+        self.cancelRecording()
+        self.continueSpeaking = false
+        self.expression = Expression()
         
-        if totalTime != 0 {
-            totalTime -= 1
-        } else {
-            self.currentMode = .taskAnalyze
-            self.setupTaskMode()
-            countdownTimer.invalidate()
+        if self.expressionTimer != nil {
+            self.expressionTimer?.invalidate()
+        }
+        if self.waveFormTimer != nil {
+            self.waveFormTimer?.invalidate()
+        }
+        if self.speechCountdownTimer != nil {
+            self.speechCountdownTimer?.invalidate()
         }
     }
+    
     
     func sendAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
