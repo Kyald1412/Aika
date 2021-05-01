@@ -10,45 +10,7 @@ import Speech
 import SoundAnalysis
 import ARKit
 
-enum CurrentMode: Int{
-    case groundZero = -1
-    case initial = 0
-    case taskOption = 1
-    case taskBegin = 2
-    case taskProcess = 3
-    case taskDone = 4
-}
-
-class MainViewController: UIViewController {
-    
-    @IBOutlet weak var lblAikaMain: UILabel!
-    @IBOutlet weak var lblSpeechRecognizer: UILabel!
-    @IBOutlet weak var waveForm: WaveFormView!
-    @IBOutlet weak var icAika: UIImageView!
-    
-    @IBOutlet var sceneView: ARSCNView!
-    
-    @IBOutlet weak var viewTaskOption: UIView!
-    @IBOutlet weak var viewSpeechAnalyzer: UIView!
-    
-    @IBOutlet weak var btnOptionTrain: DesignableButton!
-    @IBOutlet weak var btnOptionListen: DesignableButton!
-    
-    var recordingSession: AVAudioSession!
-    var audioRecorder: AVAudioRecorder!
-    let audioEngine = AVAudioEngine()
-    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
-    var request = SFSpeechAudioBufferRecognitionRequest()
-    var recognitionTask: SFSpeechRecognitionTask?
-    var isRecording = false
-    var analysis = ""
-    var levelTimer = Timer()
-    var lowPassResults: Float = 0.0
-    
-    var continueSpeaking = false
-    var silenceTimer: Float = 0.0
-    
-    var currentMode: CurrentMode = .groundZero
+extension MainViewController {
     
     @IBAction func btnOptionTrain(_ sender: Any) {
         switch (currentMode) {
@@ -64,9 +26,12 @@ class MainViewController: UIViewController {
         case .taskProcess:
             print("initial")
         case .taskDone:
-            print("Call Result View Controller here")
+            self.currentMode = .taskAnalyze
+        case .taskAnalyze:
+            print("Analysze")
+        case .showResult:
+            print("showResult")
         }
-        setupTaskMode()
     }
     
     @IBAction func btnOptionListen(_ sender: Any) {
@@ -84,16 +49,13 @@ class MainViewController: UIViewController {
         case .taskDone:
             self.continueSpeaking = true
             self.currentMode = .taskProcess
-            print("Call Result View Controller here")
+        case .taskAnalyze:
+            print("Analysze")
+        case .showResult:
+            print("showResult")
         }
-        setupTaskMode()
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        initFaceRecognition()
-        setupTaskMode()
-    }
+    
     
     func setupTaskMode(){
         
@@ -108,7 +70,7 @@ class MainViewController: UIViewController {
         case .initial :
             self.lblAikaMain.text = "Hi, how are you today?"
             self.initSpeechRecognition()
-//            self.requestSpeechAuthorization()
+        //            self.requestSpeechAuthorization()
         case .taskOption:
             self.lblAikaMain.text = "What can I do for you?"
             self.btnOptionTrain.setTitle("Public speaking training", for: .normal)
@@ -120,6 +82,7 @@ class MainViewController: UIViewController {
             self.btnOptionListen.setTitle("No, I changed my mind", for: .normal)
             self.btnOptionListen.borderWidth = 0
         case .taskProcess:
+            self.startTimer()
             self.lblAikaMain.text = "I'm listening, go on!"
             self.requestSpeechAuthorization()
         case .taskDone:
@@ -127,40 +90,66 @@ class MainViewController: UIViewController {
             self.btnOptionTrain.setTitle("Yes!", for: .normal)
             self.btnOptionListen.setTitle("I'm not done yet", for: .normal)
             self.btnOptionListen.borderWidth = 0
+            self.cancelRecording()
+        case .taskAnalyze:
+            self.lblAikaMain.text = "Analyzing your speech..."
+            self.cancelRecording()
+//            self.circularProgressBar.progressAnimation(duration: 5)
+            self.taskAnalyzeComplete()
+        case .showResult:
+            print("showResult")
         }
         
         self.setupView()
     }
     
     func setupView(){
+
+        self.viewMain.isHidden = false
+
         switch (currentMode) {
         case .groundZero:
             self.viewTaskOption.isHidden = false
             self.viewSpeechAnalyzer.isHidden = true
+            self.viewTaskAnalyze.isHidden = true
+            self.icAika.isHidden = false
         case .initial :
             self.viewTaskOption.isHidden = true
             self.viewSpeechAnalyzer.isHidden = false
+            self.viewTaskAnalyze.isHidden = true
+            self.icAika.isHidden = false
         case .taskOption:
             self.viewTaskOption.isHidden = false
             self.viewSpeechAnalyzer.isHidden = true
+            self.viewTaskAnalyze.isHidden = true
+            self.icAika.isHidden = false
         case .taskBegin:
             self.viewTaskOption.isHidden = false
             self.viewSpeechAnalyzer.isHidden = true
+            self.viewTaskAnalyze.isHidden = true
+            self.icAika.isHidden = false
         case .taskProcess:
             self.viewTaskOption.isHidden = true
             self.viewSpeechAnalyzer.isHidden = false
+            self.viewTaskAnalyze.isHidden = true
+            self.icAika.isHidden = false
         case .taskDone:
             self.viewTaskOption.isHidden = false
             self.viewSpeechAnalyzer.isHidden = true
+            self.viewTaskAnalyze.isHidden = true
+            self.icAika.isHidden = false
+        case .taskAnalyze:
+            self.viewTaskOption.isHidden = true
+            self.viewSpeechAnalyzer.isHidden = true
+            self.viewTaskAnalyze.isHidden = false
+            self.icAika.isHidden = false
+        case .showResult:
+            self.viewTaskOption.isHidden = true
+            self.viewSpeechAnalyzer.isHidden = true
+            self.viewTaskAnalyze.isHidden = true
+            self.icAika.isHidden = true
+            self.viewMain.isHidden = true
         }
     }
-    
-    //MARK: - Alert
-    func sendAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     
 }

@@ -7,6 +7,34 @@
 
 import UIKit
 
+
+extension Int {
+    
+    func timeFormatted() -> String {
+        let seconds: Int = self % 60
+        let minutes: Int = (self / 60) % 60
+        //     let hours: Int = totalSeconds / 3600
+        return String(format: "%02d:%02d", minutes, seconds)
+    }
+}
+
+
+extension UILabel {
+    func countAnimation(upto: Double) {
+        
+        let from: Double = text?.replacingOccurrences(of: ",", with: ".").components(separatedBy: CharacterSet.init(charactersIn: "-0123456789.").inverted).first.flatMap { Double($0) } ?? 0.0
+        let steps: Int = 10
+        let duration = 5.0
+        let rate = duration / Double(steps)
+        let diff = upto - from
+        for i in 0...steps {
+            DispatchQueue.main.asyncAfter(deadline: .now() + rate * Double(i)) {
+                self.text = "\(from + diff * (Double(i) / Double(steps)))%"
+            }
+        }
+    }
+}
+
 @IBDesignable
 class DesignableButton: UIButton {
     

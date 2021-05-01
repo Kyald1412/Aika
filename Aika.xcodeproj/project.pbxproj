@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC0AD533263D1C3E0063E2B6 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0AD532263D1C3E0063E2B6 /* InstructionViewController.swift */; };
+		BC0AD537263D238A0063E2B6 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0AD536263D238A0063E2B6 /* CircularProgressView.swift */; };
+		BC0AD53C263D2D430063E2B6 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0AD53B263D2D430063E2B6 /* Expression.swift */; };
+		BC0AD53F263D2D9C0063E2B6 /* MainViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0AD53E263D2D9C0063E2B6 /* MainViewControl.swift */; };
+		BC0AD544263D2E3A0063E2B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0AD543263D2E3A0063E2B6 /* Constants.swift */; };
 		BC21704F263A5CEC00651C64 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21704E263A5CEC00651C64 /* ResultViewController.swift */; };
 		BC4CA3C32639A2E3002F5C87 /* BubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3C22639A2E3002F5C87 /* BubbleShape.swift */; };
-		BC4CA3C72639AF1D002F5C87 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3C62639AF1D002F5C87 /* MainViewController.swift */; };
+		BC4CA3C72639AF1D002F5C87 /* MainControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3C62639AF1D002F5C87 /* MainControl.swift */; };
 		BC4CA3CA2639AF44002F5C87 /* SpeechRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3C92639AF44002F5C87 /* SpeechRecognition.swift */; };
 		BC4CA3CE2639AF4E002F5C87 /* FaceRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3CD2639AF4E002F5C87 /* FaceRecognition.swift */; };
 		BC70A5EB2638FD72003624FE /* WaveFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70A5EA2638FD72003624FE /* WaveFormView.swift */; };
@@ -24,9 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC0AD532263D1C3E0063E2B6 /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
+		BC0AD536263D238A0063E2B6 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		BC0AD53B263D2D430063E2B6 /* Expression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
+		BC0AD53E263D2D9C0063E2B6 /* MainViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControl.swift; sourceTree = "<group>"; };
+		BC0AD543263D2E3A0063E2B6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BC21704E263A5CEC00651C64 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		BC4CA3C22639A2E3002F5C87 /* BubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleShape.swift; sourceTree = "<group>"; };
-		BC4CA3C62639AF1D002F5C87 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BC4CA3C62639AF1D002F5C87 /* MainControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControl.swift; sourceTree = "<group>"; };
 		BC4CA3C92639AF44002F5C87 /* SpeechRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognition.swift; sourceTree = "<group>"; };
 		BC4CA3CD2639AF4E002F5C87 /* FaceRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognition.swift; sourceTree = "<group>"; };
 		BC70A5EA2638FD72003624FE /* WaveFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveFormView.swift; sourceTree = "<group>"; };
@@ -53,11 +63,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC0AD53A263D2D3A0063E2B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC0AD53B263D2D430063E2B6 /* Expression.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC0AD542263D2E300063E2B6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BC0AD543263D2E3A0063E2B6 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		BC4CA3D12639AF65002F5C87 /* Utilites */ = {
 			isa = PBXGroup;
 			children = (
 				BC4CA3C22639A2E3002F5C87 /* BubbleShape.swift */,
 				BCE711CC263A526C00DCEA75 /* UIButton+Extension.swift */,
+				BC0AD536263D238A0063E2B6 /* CircularProgressView.swift */,
 				BC70A5EA2638FD72003624FE /* WaveFormView.swift */,
 			);
 			path = Utilites;
@@ -69,7 +96,8 @@
 				BC4CA3C92639AF44002F5C87 /* SpeechRecognition.swift */,
 				BC4CA3CD2639AF4E002F5C87 /* FaceRecognition.swift */,
 				BC9442F0263A678000D08FF0 /* MainInitialize.swift */,
-				BC4CA3C62639AF1D002F5C87 /* MainViewController.swift */,
+				BC4CA3C62639AF1D002F5C87 /* MainControl.swift */,
+				BC0AD53E263D2D9C0063E2B6 /* MainViewControl.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -93,6 +121,7 @@
 		BCDBD7242637A58100072DB5 /* Aika */ = {
 			isa = PBXGroup;
 			children = (
+				BC0AD542263D2E300063E2B6 /* Helpers */,
 				BCE8CAC7263A4DC500BC2368 /* App */,
 				BCE8CAC8263A4DD100BC2368 /* Controller */,
 				BCE8CAC6263A4DB300BC2368 /* Resources */,
@@ -125,7 +154,9 @@
 		BCE8CAC8263A4DD100BC2368 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BC0AD53A263D2D3A0063E2B6 /* Models */,
 				BC9442EF263A677900D08FF0 /* Main */,
+				BC0AD532263D1C3E0063E2B6 /* InstructionViewController.swift */,
 				BC21704E263A5CEC00651C64 /* ResultViewController.swift */,
 			);
 			path = Controller;
@@ -206,9 +237,14 @@
 				BCDBD7262637A58100072DB5 /* AppDelegate.swift in Sources */,
 				BC4CA3CA2639AF44002F5C87 /* SpeechRecognition.swift in Sources */,
 				BCAA01D02637B7C900A83C22 /* EmotionModel.mlmodel in Sources */,
+				BC0AD53C263D2D430063E2B6 /* Expression.swift in Sources */,
 				BC9442F1263A678000D08FF0 /* MainInitialize.swift in Sources */,
+				BC0AD544263D2E3A0063E2B6 /* Constants.swift in Sources */,
 				BCE711CD263A526C00DCEA75 /* UIButton+Extension.swift in Sources */,
-				BC4CA3C72639AF1D002F5C87 /* MainViewController.swift in Sources */,
+				BC0AD537263D238A0063E2B6 /* CircularProgressView.swift in Sources */,
+				BC0AD533263D1C3E0063E2B6 /* InstructionViewController.swift in Sources */,
+				BC0AD53F263D2D9C0063E2B6 /* MainViewControl.swift in Sources */,
+				BC4CA3C72639AF1D002F5C87 /* MainControl.swift in Sources */,
 				BC4CA3C32639A2E3002F5C87 /* BubbleShape.swift in Sources */,
 				BCDBD7282637A58100072DB5 /* SceneDelegate.swift in Sources */,
 				BC4CA3CE2639AF4E002F5C87 /* FaceRecognition.swift in Sources */,

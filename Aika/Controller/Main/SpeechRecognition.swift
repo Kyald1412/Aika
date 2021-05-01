@@ -43,12 +43,12 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
                 audioRecorder.record()
                 
                 levelTimer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(levelTimerCallback), userInfo: nil, repeats: true)
-
+                
             } catch {
                 //finishRecording(success: false)
             }
             
-
+            
         }
     }
     
@@ -75,28 +75,30 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
     
     func cancelRecording() {
         
-        isRecording = false
-        
-        audioRecorder.stop()
-        levelTimer.invalidate()
-        silenceTimer = 0
-
-        // stop audio
-        request.endAudio()
-        audioEngine.stop()
-        audioEngine.inputNode.removeTap(onBus: 0)
-        
-        DispatchQueue.main.async { [unowned self] in
-            guard let task = self.recognitionTask else {
-                fatalError("Error")
+        if audioRecorder != nil {
+            isRecording = false
+            
+            audioRecorder.stop()
+            levelTimer.invalidate()
+            silenceTimer = 0
+            
+            // stop audio
+            request.endAudio()
+            audioEngine.stop()
+            audioEngine.inputNode.removeTap(onBus: 0)
+            
+            DispatchQueue.main.async { [unowned self] in
+                guard let task = self.recognitionTask else {
+                    fatalError("Error")
+                }
+                task.cancel()
+                task.finish()
             }
-            task.cancel()
-            task.finish()
         }
-
-//        recognitionTask?.cancel()
-//        recognitionTask?.finish()
-//        recognitionTask = nil
+        
+        //        recognitionTask?.cancel()
+        //        recognitionTask?.finish()
+        //        recognitionTask = nil
     }
     
     @objc func updateMeters(){
@@ -128,7 +130,7 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
             recognitionTask = nil
         }
         print("CURRENT TASK AVAIL? 222 \(recognitionTask)")
-
+        
         self.request =  SFSpeechAudioBufferRecognitionRequest()
         let node = audioEngine.inputNode
         let recordingFormat = node.outputFormat(forBus: 0)
@@ -158,7 +160,7 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
         
         print("SUPPORT ON DEVICE \(speechRecognizer?.supportsOnDeviceRecognition)")
         print("AUDIO BUFFER \(self.request)")
-
+        
         let currentSpeechText = self.lblSpeechRecognizer.text ?? ""
         
         recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { result, error in
@@ -182,7 +184,7 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
                 } else {
                     self.lblSpeechRecognizer.text = bestString
                 }
-
+                
                 
             } else if let error = error {
                 self.sendAlert(title: "Speech Recognizer Error", message: "There has been a speech recognition error.")
@@ -193,6 +195,8 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
     
     func checkCurrentTask() {
         switch (currentMode) {
+        case .groundZero:
+            print("groundZero")
         case .initial :
             print("initial")
             self.initialTaskCheck()
@@ -205,8 +209,10 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
             taskProcessCheck()
         case .taskDone:
             print("Call Result View Controller here")
-        case .groundZero:
-            print("groundZero")
+        case .taskAnalyze:
+            print("Call Result View Controller here")
+        case .showResult:
+            print("showResult")
             
         }
         
@@ -214,18 +220,16 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
     
     func taskProcessCheck(){
         if self.lblSpeechRecognizer.text?.count ?? 0 > 0 && silenceTimer > 5 {
-            self.currentMode = .taskDone
             self.cancelRecording()
             self.continueSpeaking = false
-            setupTaskMode()
+            self.currentMode = .taskDone
         }
     }
     
     func initialTaskCheck(){
         if self.lblSpeechRecognizer.text?.count ?? 0 > 0 && silenceTimer > 2 {
-            self.currentMode = .taskOption
             self.cancelRecording()
-            setupTaskMode()
+            self.currentMode = .taskOption
         }
     }
     
