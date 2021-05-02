@@ -56,10 +56,33 @@ extension MainViewController {
         }
     }
     
+    @IBAction func onDoneSpeaking(_ sender: Any) {
+        switch (currentMode) {
+        case .groundZero:
+            print("groundZero")
+        case .initial :
+            self.currentMode = .taskOption
+        case .taskOption:
+            print("taskOption")
+        case .taskBegin:
+            print("taskBegin")
+        case .taskProcess:
+            self.currentMode = .taskAnalyze
+        case .taskDone:
+            print("taskDone")
+        case .taskAnalyze:
+            print("Analysze")
+        case .showResult:
+            print("showResult")
+        }
+    }
+    
     
     func setupTaskMode(){
         
         self.lblSpeechRecognizer.text = ""
+        self.imgProgress.isHidden = true
+        
         switch (currentMode) {
         case .groundZero:
             self.lblAikaMain.text = "Hi, how are you today?"
@@ -157,8 +180,11 @@ extension MainViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is ResultViewController {
+        
+        self.viewMain.isHidden = true
+        self.icAika.isHidden = true
 
+        if segue.destination is ResultViewController {
             if let vc = segue.destination as? ResultViewController {
                 vc.expression = self.expression
             }
@@ -166,12 +192,14 @@ extension MainViewController {
         }
     }
     
-    
     func openResultView(){
         self.performSegue(withIdentifier: resultSegue, sender: nil)
     }
     
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
+
+        self.viewMain.isHidden = false
+        self.icAika.isHidden = false
 
         if seg.source is ResultViewController {
             self.currentMode = .groundZero

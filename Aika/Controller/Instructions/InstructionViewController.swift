@@ -9,10 +9,7 @@ import UIKit
 import ARKit
 
 class InstructionViewController : UIViewController{
-   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
+    
     
 }
+

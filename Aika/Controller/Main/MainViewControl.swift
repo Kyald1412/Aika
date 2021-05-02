@@ -28,8 +28,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var viewSpeechAnalyzer: UIView!
     @IBOutlet weak var viewTaskAnalyze: UIView!
 
-    @IBOutlet weak var btnOptionTrain: DesignableButton!
-    @IBOutlet weak var btnOptionListen: DesignableButton!
+    @IBOutlet weak var btnOptionTrain: DesignableView!
+    @IBOutlet weak var btnOptionListen: DesignableView!
     
     @IBOutlet weak var lblTimer: UILabel!
     @IBOutlet var sceneView: ARSCNView!

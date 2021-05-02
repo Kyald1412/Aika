@@ -28,28 +28,54 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFo-Dm-MQv">
-                                <rect key="frame" x="367" y="100" width="27" height="36"/>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFo-Dm-MQv" customClass="DesignableView" customModule="Aika" customModuleProvider="target">
+                                <rect key="frame" x="362" y="104" width="32" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="5ym-BQ-UUY"/>
+                                    <constraint firstAttribute="width" constant="32" id="U1e-T2-T20"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="allsports"/>
+                                <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
                                 <state key="normal">
+                                    <color key="titleColor" name="allsports"/>
                                     <imageReference key="image" image="gear" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="g3z-hJ-yXw" kind="presentation" identifier="showSettingSegue" modalPresentationStyle="overFullScreen" id="Ms2-e4-aPO"/>
                                 </connections>
                             </button>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJG-aD-WhR">
-                                <rect key="frame" x="369" y="64" width="25" height="36"/>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJG-aD-WhR" customClass="DesignableView" customModule="Aika" customModuleProvider="target">
+                                <rect key="frame" x="362" y="64" width="32" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="VCN-th-2Sb"/>
+                                    <constraint firstAttribute="width" constant="32" id="y9I-UI-Tt1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="allsports"/>
+                                <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
                                 <state key="normal">
                                     <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="bYe-y9-OCx" kind="presentation" identifier="showResultSegue" modalPresentationStyle="overFullScreen" id="ztb-RC-QSh"/>
+                                    <segue destination="lhr-zx-Oh1" kind="presentation" identifier="showInstructionSegue" modalPresentationStyle="overFullScreen" id="oWp-xE-6Ba"/>
                                 </connections>
                             </button>
                             <view hidden="YES" alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4w-Ri-xf9">
@@ -84,7 +110,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9d-ux-sGo">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9d-ux-sGo">
                                         <rect key="frame" x="172.5" y="16" width="101.5" height="0.0"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -99,7 +125,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="EFk-LW-Z0W">
                                                         <rect key="frame" x="0.0" y="-33" width="262" height="66"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1s-yX-9Hc" customClass="DesignableButton" customModule="Aika" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1s-yX-9Hc" customClass="DesignableView" customModule="Aika" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="262" height="30"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
@@ -122,7 +148,7 @@
                                                                     <action selector="btnOptionTrain:" destination="9CZ-9S-IWv" eventType="touchUpInside" id="PBI-DY-3MZ"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEv-Eh-Wtf" customClass="DesignableButton" customModule="Aika" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEv-Eh-Wtf" customClass="DesignableView" customModule="Aika" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="36" width="262" height="30"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
@@ -155,8 +181,8 @@
                                                     <constraint firstItem="EFk-LW-Z0W" firstAttribute="leading" secondItem="AuL-HU-xDE" secondAttribute="leading" id="a4R-k1-Wry"/>
                                                 </constraints>
                                             </view>
-                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aet-8o-vLP">
-                                                <rect key="frame" x="0.0" y="0.0" width="262" height="0.0"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aet-8o-vLP">
+                                                <rect key="frame" x="0.0" y="0.0" width="262" height="94"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Cg-ZZ-CPg" customClass="WaveFormView" customModule="Aika" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="262" height="50"/>
@@ -166,31 +192,58 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLr-z5-iW1">
-                                                        <rect key="frame" x="0.0" y="58" width="262" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="58" width="0.0" height="0.0"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xk-0R-kpu" customClass="DesignableView" customModule="Aika" customModuleProvider="target">
+                                                        <rect key="frame" x="191" y="69" width="63" height="25"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="M3d-lY-MIN"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                                        <state key="normal" title="Done!"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="btnOptionTrain:" destination="9CZ-9S-IWv" eventType="touchUpInside" id="ucf-WJ-MUT"/>
+                                                            <action selector="onDoneSpeaking:" destination="9CZ-9S-IWv" eventType="touchUpInside" id="St7-Vc-QCW"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="zLr-z5-iW1" firstAttribute="leading" secondItem="aet-8o-vLP" secondAttribute="leading" id="0Qp-Eb-Aw5"/>
+                                                    <constraint firstAttribute="bottom" secondItem="2xk-0R-kpu" secondAttribute="bottom" id="6F7-6y-o2G"/>
                                                     <constraint firstItem="zLr-z5-iW1" firstAttribute="top" secondItem="9Cg-ZZ-CPg" secondAttribute="bottom" constant="8" id="Jbm-7k-mbb"/>
                                                     <constraint firstAttribute="trailing" secondItem="9Cg-ZZ-CPg" secondAttribute="trailing" id="Uqx-YC-25L"/>
-                                                    <constraint firstAttribute="trailing" secondItem="zLr-z5-iW1" secondAttribute="trailing" id="hQV-eB-tSD"/>
                                                     <constraint firstItem="9Cg-ZZ-CPg" firstAttribute="top" secondItem="aet-8o-vLP" secondAttribute="top" id="oQS-uD-pW0"/>
                                                     <constraint firstItem="9Cg-ZZ-CPg" firstAttribute="leading" secondItem="aet-8o-vLP" secondAttribute="leading" id="rdb-tU-cLa"/>
+                                                    <constraint firstItem="2xk-0R-kpu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zLr-z5-iW1" secondAttribute="trailing" constant="10" id="t4H-DX-ijG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2xk-0R-kpu" secondAttribute="trailing" constant="8" id="vVW-wG-MXl"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CiN-ab-1QQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="262" height="94"/>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CiN-ab-1QQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="262" height="0.0"/>
                                                 <subviews>
                                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JUP-X2-mKb">
-                                                        <rect key="frame" x="101" y="17.5" width="60" height="59"/>
+                                                        <rect key="frame" x="101" y="-29.5" width="60" height="59"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lng-Ke-OeG">
-                                                        <rect key="frame" x="101" y="17" width="60" height="60"/>
+                                                        <rect key="frame" x="101" y="-30" width="60" height="60"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYy-sl-5xe">
                                                                 <rect key="frame" x="-44" y="22" width="146.5" height="16"/>
@@ -251,7 +304,7 @@
                             <constraint firstItem="Ykj-cD-zS4" firstAttribute="trailing" secondItem="e4w-Ri-xf9" secondAttribute="trailing" id="6rY-TY-ypj"/>
                             <constraint firstItem="DNS-hU-J8Z" firstAttribute="top" secondItem="Ykj-cD-zS4" secondAttribute="top" constant="16" id="C43-TR-rlA"/>
                             <constraint firstItem="rWv-3H-5K5" firstAttribute="leading" secondItem="Ykj-cD-zS4" secondAttribute="leading" id="HFM-9D-VtH"/>
-                            <constraint firstItem="EFo-Dm-MQv" firstAttribute="top" secondItem="HJG-aD-WhR" secondAttribute="bottom" id="PXW-vl-8z3"/>
+                            <constraint firstItem="EFo-Dm-MQv" firstAttribute="top" secondItem="HJG-aD-WhR" secondAttribute="bottom" constant="8" id="PXW-vl-8z3"/>
                             <constraint firstItem="Ykj-cD-zS4" firstAttribute="bottom" secondItem="Usu-hG-zhL" secondAttribute="bottom" constant="20" id="Qrb-S7-Awf"/>
                             <constraint firstItem="rWv-3H-5K5" firstAttribute="top" secondItem="Ykj-cD-zS4" secondAttribute="top" id="SLk-Q0-oBO"/>
                             <constraint firstItem="Usu-hG-zhL" firstAttribute="leading" secondItem="kl7-Fa-v90" secondAttribute="trailing" id="Sgb-iB-AsX"/>
@@ -284,7 +337,7 @@
                         <outlet property="viewTaskAnalyze" destination="CiN-ab-1QQ" id="y3E-Mz-WrC"/>
                         <outlet property="viewTaskOption" destination="AuL-HU-xDE" id="5SH-PG-BMl"/>
                         <outlet property="waveForm" destination="9Cg-ZZ-CPg" id="lb4-bk-ZYP"/>
-                        <segue destination="lhr-zx-Oh1" kind="presentation" identifier="showInstructionSegue" modalPresentationStyle="overFullScreen" id="jCR-ik-S1j"/>
+                        <segue destination="bYe-y9-OCx" kind="presentation" identifier="showResultSegue" modalPresentationStyle="overFullScreen" id="0Ve-IW-Z4u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CUo-SF-NIi" sceneMemberID="firstResponder"/>
@@ -300,10 +353,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZr-3v-rpd">
-                                <rect key="frame" x="32" y="303" width="350" height="300"/>
+                                <rect key="frame" x="32" y="291.5" width="350" height="323.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Nb-3i-AOg" customClass="BubbleShapeView" customModule="Aika" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="323.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -321,29 +374,8 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piE-Pa-6Ju" customClass="DesignableButton" customModule="Aika" customModuleProvider="target">
-                                        <rect key="frame" x="103" y="210" width="144" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="zIw-f2-BDr"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
-                                        <state key="normal" title="Show my speech text"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF3-L3-16l" customClass="DesignableButton" customModule="Aika" customModuleProvider="target">
-                                        <rect key="frame" x="142.5" y="250" width="65" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF3-L3-16l" customClass="DesignableView" customModule="Aika" customModuleProvider="target">
+                                        <rect key="frame" x="142.5" y="273.5" width="65" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="1IQ-Bt-aOq"/>
@@ -366,43 +398,50 @@
                                             <segue destination="SxU-n7-MLW" kind="unwind" unwindAction="unwind:" id="8cT-aI-jWZ"/>
                                         </connections>
                                     </button>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IeY-4T-61V">
-                                        <rect key="frame" x="20" y="67.5" width="310" height="134.5"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="W0D-kC-hlt">
-                                            <size key="itemSize" width="128" height="128"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells/>
-                                    </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Time Speaking : 50s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwj-25-6KZ">
                                         <rect key="frame" x="20" y="46" width="310" height="13.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLg-oJ-CeY">
+                                        <rect key="frame" x="0.0" y="66.5" width="350" height="200"/>
+                                        <subviews>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfk-1o-gQy">
+                                                <rect key="frame" x="-32" y="0.0" width="414" height="200"/>
+                                            </scrollView>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="bFB-KN-oON">
+                                                <rect key="frame" x="123.5" y="172.5" width="103.5" height="27.5"/>
+                                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </pageControl>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Bu2-Xk-4cK"/>
+                                            <constraint firstItem="bFB-KN-oON" firstAttribute="bottom" secondItem="yfk-1o-gQy" secondAttribute="bottom" id="IZE-Ih-p9s"/>
+                                            <constraint firstAttribute="bottom" secondItem="yfk-1o-gQy" secondAttribute="bottom" id="PLE-Af-EJl"/>
+                                            <constraint firstItem="yfk-1o-gQy" firstAttribute="top" secondItem="fLg-oJ-CeY" secondAttribute="top" id="STY-E7-pDj"/>
+                                            <constraint firstItem="bFB-KN-oON" firstAttribute="centerX" secondItem="yfk-1o-gQy" secondAttribute="centerX" id="TJT-xK-RW7"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="J7d-Da-2bU" firstAttribute="top" secondItem="lZr-3v-rpd" secondAttribute="top" constant="20" id="0CF-LC-nHs"/>
                                     <constraint firstAttribute="trailing" secondItem="8Nb-3i-AOg" secondAttribute="trailing" id="1X4-Mo-aJP"/>
                                     <constraint firstItem="NF3-L3-16l" firstAttribute="centerX" secondItem="lZr-3v-rpd" secondAttribute="centerX" id="4Pu-ql-T6c"/>
-                                    <constraint firstItem="IeY-4T-61V" firstAttribute="top" secondItem="Lwj-25-6KZ" secondAttribute="bottom" constant="8" id="AOa-b2-j68"/>
+                                    <constraint firstAttribute="trailing" secondItem="fLg-oJ-CeY" secondAttribute="trailing" id="5Rj-lk-GsG"/>
+                                    <constraint firstItem="fLg-oJ-CeY" firstAttribute="top" secondItem="Lwj-25-6KZ" secondAttribute="bottom" constant="7" id="Diy-c6-9O8"/>
                                     <constraint firstItem="J7d-Da-2bU" firstAttribute="leading" secondItem="lZr-3v-rpd" secondAttribute="leading" constant="20" id="I7E-m7-iVv"/>
-                                    <constraint firstItem="NF3-L3-16l" firstAttribute="top" secondItem="piE-Pa-6Ju" secondAttribute="bottom" constant="10" id="PPw-Tg-yhb"/>
-                                    <constraint firstItem="piE-Pa-6Ju" firstAttribute="centerX" secondItem="lZr-3v-rpd" secondAttribute="centerX" id="Qkz-Pr-IHK"/>
-                                    <constraint firstItem="piE-Pa-6Ju" firstAttribute="top" secondItem="IeY-4T-61V" secondAttribute="bottom" constant="8" id="UnC-n5-I5e"/>
+                                    <constraint firstItem="NF3-L3-16l" firstAttribute="top" secondItem="fLg-oJ-CeY" secondAttribute="bottom" constant="7" id="Pxp-70-eZf"/>
                                     <constraint firstItem="8Nb-3i-AOg" firstAttribute="top" secondItem="lZr-3v-rpd" secondAttribute="top" id="WWi-Mk-Npj"/>
                                     <constraint firstItem="8Nb-3i-AOg" firstAttribute="leading" secondItem="lZr-3v-rpd" secondAttribute="leading" id="cR2-Ch-Ezm"/>
-                                    <constraint firstItem="IeY-4T-61V" firstAttribute="leading" secondItem="lZr-3v-rpd" secondAttribute="leading" constant="20" id="dUH-q3-4iN"/>
                                     <constraint firstAttribute="trailing" secondItem="Lwj-25-6KZ" secondAttribute="trailing" constant="20" id="dzO-xd-Xz2"/>
                                     <constraint firstAttribute="trailing" secondItem="J7d-Da-2bU" secondAttribute="trailing" constant="20" id="eYt-ZT-EWr"/>
-                                    <constraint firstAttribute="trailing" secondItem="IeY-4T-61V" secondAttribute="trailing" constant="20" id="fIY-ci-gCL"/>
                                     <constraint firstItem="Lwj-25-6KZ" firstAttribute="leading" secondItem="lZr-3v-rpd" secondAttribute="leading" constant="20" symbolic="YES" id="hla-vh-SUQ"/>
+                                    <constraint firstItem="fLg-oJ-CeY" firstAttribute="leading" secondItem="lZr-3v-rpd" secondAttribute="leading" id="iwg-oP-lMB"/>
                                     <constraint firstAttribute="bottom" secondItem="8Nb-3i-AOg" secondAttribute="bottom" id="l2o-bS-gac"/>
-                                    <constraint firstAttribute="height" constant="300" id="y0v-es-tMt"/>
                                     <constraint firstItem="Lwj-25-6KZ" firstAttribute="top" secondItem="J7d-Da-2bU" secondAttribute="bottom" constant="10" id="y3z-6j-ZzC"/>
                                     <constraint firstAttribute="bottom" secondItem="NF3-L3-16l" secondAttribute="bottom" constant="20" id="zH9-Ld-Rsf"/>
                                 </constraints>
@@ -412,17 +451,24 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lZr-3v-rpd" firstAttribute="centerY" secondItem="d0q-PY-5AB" secondAttribute="centerY" id="GES-FY-1Qb"/>
+                            <constraint firstItem="yfk-1o-gQy" firstAttribute="leading" secondItem="d0q-PY-5AB" secondAttribute="leading" id="Kbg-nk-3Hg"/>
                             <constraint firstItem="lZr-3v-rpd" firstAttribute="centerX" secondItem="d0q-PY-5AB" secondAttribute="centerX" id="Q1c-QV-nTG"/>
                             <constraint firstItem="d0q-PY-5AB" firstAttribute="trailing" secondItem="lZr-3v-rpd" secondAttribute="trailing" constant="32" id="QR9-vS-0E1"/>
+                            <constraint firstItem="d0q-PY-5AB" firstAttribute="trailing" secondItem="yfk-1o-gQy" secondAttribute="trailing" id="VMx-lx-gjb"/>
                             <constraint firstItem="lZr-3v-rpd" firstAttribute="leading" secondItem="d0q-PY-5AB" secondAttribute="leading" constant="32" id="hho-ve-aU2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nwg-Rp-Ajy"/>
+                    <connections>
+                        <outlet property="lblTimeSpeak" destination="Lwj-25-6KZ" id="Vxm-fs-G3h"/>
+                        <outlet property="pageControl" destination="bFB-KN-oON" id="8CJ-TS-9W5"/>
+                        <outlet property="scrollView" destination="yfk-1o-gQy" id="Suv-0Q-5kc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kw2-A0-S00" sceneMemberID="firstResponder"/>
                 <exit id="SxU-n7-MLW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="199" y="589"/>
+            <point key="canvasLocation" x="198.55072463768118" y="588.61607142857144"/>
         </scene>
         <!--Instruction View Controller-->
         <scene sceneID="kYk-Z3-hgJ">
@@ -433,10 +479,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPT-GZ-5KB">
-                                <rect key="frame" x="32" y="303" width="350" height="300"/>
+                                <rect key="frame" x="32" y="228" width="350" height="450"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2p-fD-7tN" customClass="BubbleShapeView" customModule="Aika" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -448,14 +494,126 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="arrowDirectionIB" value="none"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Manual Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVx-jT-vH1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVx-jT-vH1">
                                         <rect key="frame" x="20" y="20" width="310" height="16"/>
+                                        <string key="text">Wecome to AIKA
+Manual Instructions</string>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIC-uk-L9a" customClass="DesignableButton" customModule="Aika" customModuleProvider="target">
-                                        <rect key="frame" x="142.5" y="250" width="65" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Manual Instructions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRL-VO-vSM">
+                                        <rect key="frame" x="115.5" y="44" width="119" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" allowsEditingTextAttributes="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGm-Mg-XlH">
+                                        <rect key="frame" x="16" y="68" width="318" height="324"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <mutableString key="content">Aika is built exclusively to train your public speaking skill.
+
+You can talk/speech after choosing which method do you want to train and Aika will recognize your expression, eye movement, and articulation during training. 
+At the end each session, you will be given result of your performance and AIKA will give a feedback for you! 
+-----------------------------------------------------
+ Aika has 5 default interactions
+
+</mutableString>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">[Hi, how are you today?]
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Bold"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">You can press the button and start to say any words for calibration.
+
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">[What can I do for you?]
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Bold"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">You have to choose a method you want to train with AIKA
+
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="[Shall we start?]">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Bold"/>
+                                                    <font key="NSOriginalFont" size="12" name="SFPro-Bold"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">
+Begin your training by pressing the button
+
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="[I’m listening, go on!]">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Bold"/>
+                                                    <font key="NSOriginalFont" size="12" name="SFPro-Bold"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">
+AIKA is listening, you can start talk/speech to begin training
+
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="[Are you finished?]">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Bold"/>
+                                                    <font key="NSOriginalFont" size="12" name="SFPro-Bold"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">
+Aika will detect whether you have been stop speaking or not, and you have to choose if you want to continue or not.</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIC-uk-L9a" customClass="DesignableView" customModule="Aika" customModuleProvider="target">
+                                        <rect key="frame" x="142.5" y="400" width="65" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="bvh-by-vZp"/>
@@ -482,15 +640,21 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="hIC-uk-L9a" secondAttribute="bottom" constant="20" id="0K0-DR-isY"/>
+                                    <constraint firstItem="xGm-Mg-XlH" firstAttribute="leading" secondItem="PPT-GZ-5KB" secondAttribute="leading" constant="16" id="4aN-bS-ZRR"/>
                                     <constraint firstItem="WVx-jT-vH1" firstAttribute="top" secondItem="PPT-GZ-5KB" secondAttribute="top" constant="20" id="576-iG-47Z"/>
                                     <constraint firstAttribute="trailing" secondItem="WVx-jT-vH1" secondAttribute="trailing" constant="20" id="C1z-z4-gLb"/>
-                                    <constraint firstAttribute="height" constant="300" id="Lj3-kU-NOO"/>
+                                    <constraint firstItem="xGm-Mg-XlH" firstAttribute="top" secondItem="bRL-VO-vSM" secondAttribute="bottom" constant="8" id="CuH-cw-R8O"/>
+                                    <constraint firstAttribute="height" constant="450" id="Lj3-kU-NOO"/>
+                                    <constraint firstAttribute="trailing" secondItem="xGm-Mg-XlH" secondAttribute="trailing" constant="16" id="MHk-ub-Uno"/>
+                                    <constraint firstItem="hIC-uk-L9a" firstAttribute="top" secondItem="xGm-Mg-XlH" secondAttribute="bottom" constant="8" id="ORK-Xj-eYx"/>
                                     <constraint firstAttribute="bottom" secondItem="c2p-fD-7tN" secondAttribute="bottom" id="QEb-Pz-4yn"/>
                                     <constraint firstAttribute="trailing" secondItem="c2p-fD-7tN" secondAttribute="trailing" id="RBf-mm-hsV"/>
                                     <constraint firstItem="c2p-fD-7tN" firstAttribute="top" secondItem="PPT-GZ-5KB" secondAttribute="top" id="W3Q-Kh-hi8"/>
                                     <constraint firstItem="hIC-uk-L9a" firstAttribute="centerX" secondItem="PPT-GZ-5KB" secondAttribute="centerX" id="ano-1c-Bgk"/>
                                     <constraint firstItem="WVx-jT-vH1" firstAttribute="leading" secondItem="PPT-GZ-5KB" secondAttribute="leading" constant="20" id="bol-w7-Zqc"/>
                                     <constraint firstItem="c2p-fD-7tN" firstAttribute="leading" secondItem="PPT-GZ-5KB" secondAttribute="leading" id="dxP-n8-nsc"/>
+                                    <constraint firstItem="bRL-VO-vSM" firstAttribute="centerX" secondItem="PPT-GZ-5KB" secondAttribute="centerX" id="n7A-bv-j4W"/>
+                                    <constraint firstItem="bRL-VO-vSM" firstAttribute="top" secondItem="WVx-jT-vH1" secondAttribute="bottom" constant="8" id="xPp-nE-Smd"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -551,7 +715,7 @@
                                             <action selector="onUseOfflineRecognition:" destination="g3z-hJ-yXw" eventType="valueChanged" id="VfT-Jj-z4b"/>
                                         </connections>
                                     </switch>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2v6-Pp-zUu" customClass="DesignableButton" customModule="Aika" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2v6-Pp-zUu" customClass="DesignableView" customModule="Aika" customModuleProvider="target">
                                         <rect key="frame" x="142.5" y="250" width="65" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -620,6 +784,15 @@
         <designable name="2v6-Pp-zUu">
             <size key="intrinsicContentSize" width="65" height="14"/>
         </designable>
+        <designable name="2xk-0R-kpu">
+            <size key="intrinsicContentSize" width="63" height="14"/>
+        </designable>
+        <designable name="EFo-Dm-MQv">
+            <size key="intrinsicContentSize" width="39" height="48"/>
+        </designable>
+        <designable name="HJG-aD-WhR">
+            <size key="intrinsicContentSize" width="37" height="48"/>
+        </designable>
         <designable name="NF3-L3-16l">
             <size key="intrinsicContentSize" width="65" height="14"/>
         </designable>
@@ -628,9 +801,6 @@
         </designable>
         <designable name="hIC-uk-L9a">
             <size key="intrinsicContentSize" width="65" height="14"/>
-        </designable>
-        <designable name="piE-Pa-6Ju">
-            <size key="intrinsicContentSize" width="144" height="14"/>
         </designable>
         <designable name="vEv-Eh-Wtf">
             <size key="intrinsicContentSize" width="102" height="26"/>

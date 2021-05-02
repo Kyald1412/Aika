@@ -25,6 +25,8 @@ class SettingViewController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.offlineRecognitionControl.isOn = Constants.useOnDeviceRecognition
+        
     }
     
 }

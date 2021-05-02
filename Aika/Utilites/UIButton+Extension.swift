@@ -18,6 +18,13 @@ extension Int {
     
 }
 
+extension Float {
+    
+    func formatted() -> String {
+        return String(format: "%.1f", self)
+    }
+    
+}
 
 extension UILabel {
     func countAnimation(upto: Double) {
@@ -36,7 +43,7 @@ extension UILabel {
 }
 
 @IBDesignable
-class DesignableButton: UIButton {
+class DesignableView: UIButton {
     
     @IBInspectable
     /// Should the corner be as circle

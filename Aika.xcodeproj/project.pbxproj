@@ -21,6 +21,10 @@
 		BC70A5EB2638FD72003624FE /* WaveFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70A5EA2638FD72003624FE /* WaveFormView.swift */; };
 		BC9442F1263A678000D08FF0 /* MainInitialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9442F0263A678000D08FF0 /* MainInitialize.swift */; };
 		BCAA01D02637B7C900A83C22 /* EmotionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BCAA01CF2637B7C900A83C22 /* EmotionModel.mlmodel */; };
+		BCCFA781263E6C1A00BA08C6 /* EmotionsResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFA780263E6C1A00BA08C6 /* EmotionsResultView.swift */; };
+		BCCFA785263E6C1D00BA08C6 /* SpeechResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFA784263E6C1D00BA08C6 /* SpeechResultView.swift */; };
+		BCCFA789263E6C3200BA08C6 /* SpeechResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCFA788263E6C3200BA08C6 /* SpeechResultView.xib */; };
+		BCCFA78C263E6C3D00BA08C6 /* EmotionsResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCFA78B263E6C3400BA08C6 /* EmotionsResultView.xib */; };
 		BCDBD7262637A58100072DB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDBD7252637A58100072DB5 /* AppDelegate.swift */; };
 		BCDBD7282637A58100072DB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDBD7272637A58100072DB5 /* SceneDelegate.swift */; };
 		BCDBD72D2637A58100072DB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCDBD72B2637A58100072DB5 /* Main.storyboard */; };
@@ -44,6 +48,10 @@
 		BC70A5EA2638FD72003624FE /* WaveFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveFormView.swift; sourceTree = "<group>"; };
 		BC9442F0263A678000D08FF0 /* MainInitialize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInitialize.swift; sourceTree = "<group>"; };
 		BCAA01CF2637B7C900A83C22 /* EmotionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EmotionModel.mlmodel; sourceTree = "<group>"; };
+		BCCFA780263E6C1A00BA08C6 /* EmotionsResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsResultView.swift; sourceTree = "<group>"; };
+		BCCFA784263E6C1D00BA08C6 /* SpeechResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechResultView.swift; sourceTree = "<group>"; };
+		BCCFA788263E6C3200BA08C6 /* SpeechResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeechResultView.xib; sourceTree = "<group>"; };
+		BCCFA78B263E6C3400BA08C6 /* EmotionsResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmotionsResultView.xib; sourceTree = "<group>"; };
 		BCDBD7222637A58100072DB5 /* Aika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCDBD7252637A58100072DB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCDBD7272637A58100072DB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +112,34 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		BCCFA77D263E6BDD00BA08C6 /* Instructions */ = {
+			isa = PBXGroup;
+			children = (
+				BC0AD532263D1C3E0063E2B6 /* InstructionViewController.swift */,
+			);
+			path = Instructions;
+			sourceTree = "<group>";
+		};
+		BCCFA77E263E6BE200BA08C6 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				BCCFA77F263E6BED00BA08C6 /* Views */,
+				BC21704E263A5CEC00651C64 /* ResultViewController.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		BCCFA77F263E6BED00BA08C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BCCFA784263E6C1D00BA08C6 /* SpeechResultView.swift */,
+				BCCFA780263E6C1A00BA08C6 /* EmotionsResultView.swift */,
+				BCCFA78B263E6C3400BA08C6 /* EmotionsResultView.xib */,
+				BCCFA788263E6C3200BA08C6 /* SpeechResultView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BCDBD7192637A58100072DB5 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +161,7 @@
 			children = (
 				BC0AD542263D2E300063E2B6 /* Helpers */,
 				BCE8CAC7263A4DC500BC2368 /* App */,
+				BC0AD53A263D2D3A0063E2B6 /* Models */,
 				BCE8CAC8263A4DD100BC2368 /* Controller */,
 				BCE8CAC6263A4DB300BC2368 /* Resources */,
 				BC4CA3D12639AF65002F5C87 /* Utilites */,
@@ -156,11 +193,10 @@
 		BCE8CAC8263A4DD100BC2368 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BC0AD53A263D2D3A0063E2B6 /* Models */,
+				BCCFA77E263E6BE200BA08C6 /* Result */,
+				BCCFA77D263E6BDD00BA08C6 /* Instructions */,
 				BC9442EF263A677900D08FF0 /* Main */,
-				BC0AD532263D1C3E0063E2B6 /* InstructionViewController.swift */,
 				BC3048A7263DBFCD00B9B31C /* SettingViewController.swift */,
-				BC21704E263A5CEC00651C64 /* ResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -225,6 +261,8 @@
 				BCDBD7322637A58200072DB5 /* LaunchScreen.storyboard in Resources */,
 				BCDBD72F2637A58200072DB5 /* Assets.xcassets in Resources */,
 				BCDBD72D2637A58100072DB5 /* Main.storyboard in Resources */,
+				BCCFA789263E6C3200BA08C6 /* SpeechResultView.xib in Resources */,
+				BCCFA78C263E6C3D00BA08C6 /* EmotionsResultView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,12 +282,14 @@
 				BCAA01D02637B7C900A83C22 /* EmotionModel.mlmodel in Sources */,
 				BC0AD53C263D2D430063E2B6 /* Expression.swift in Sources */,
 				BC9442F1263A678000D08FF0 /* MainInitialize.swift in Sources */,
+				BCCFA785263E6C1D00BA08C6 /* SpeechResultView.swift in Sources */,
 				BC0AD544263D2E3A0063E2B6 /* Constants.swift in Sources */,
 				BCE711CD263A526C00DCEA75 /* UIButton+Extension.swift in Sources */,
 				BC0AD533263D1C3E0063E2B6 /* InstructionViewController.swift in Sources */,
 				BC0AD53F263D2D9C0063E2B6 /* MainViewControl.swift in Sources */,
 				BC4CA3C72639AF1D002F5C87 /* MainControl.swift in Sources */,
 				BC4CA3C32639A2E3002F5C87 /* BubbleShape.swift in Sources */,
+				BCCFA781263E6C1A00BA08C6 /* EmotionsResultView.swift in Sources */,
 				BCDBD7282637A58100072DB5 /* SceneDelegate.swift in Sources */,
 				BC4CA3CE2639AF4E002F5C87 /* FaceRecognition.swift in Sources */,
 			);
