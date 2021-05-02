@@ -31,6 +31,14 @@ extension MainViewController: ARSCNViewDelegate {
         sceneView.session.pause()
     }
     
+
+    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+        let faceMesh = ARSCNFaceGeometry(device: sceneView.device!)
+        let node = SCNNode(geometry: faceMesh)
+        node.geometry?.firstMaterial?.fillMode = .fill
+        return node
+    }
+    
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         if let faceAnchor = anchor as? ARFaceAnchor{
             expression(anchor: faceAnchor, renderer: renderer)

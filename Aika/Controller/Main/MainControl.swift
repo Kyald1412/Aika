@@ -77,7 +77,6 @@ extension MainViewController {
         }
     }
     
-    
     func setupTaskMode(){
         
         self.lblSpeechRecognizer.text = ""
@@ -98,6 +97,7 @@ extension MainViewController {
             self.btnOptionTrain.setTitle("Public speaking training", for: .normal)
             self.btnOptionListen.setTitle("Listen to your story", for: .normal)
             self.btnOptionListen.borderWidth = 0.5
+            self.cancelRecording()
         case .taskBegin:
             self.lblAikaMain.text = "Shall we start?"
             self.btnOptionTrain.setTitle("Ready!", for: .normal)
