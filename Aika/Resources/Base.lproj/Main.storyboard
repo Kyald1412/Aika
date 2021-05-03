@@ -22,6 +22,12 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7c-aw-ucJ">
+                                <rect key="frame" x="16" y="96.5" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNS-hU-J8Z">
                                 <rect key="frame" x="16" y="60" width="41.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -191,7 +197,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="gAV-Kd-OYa"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLr-z5-iW1">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLr-z5-iW1">
                                                         <rect key="frame" x="0.0" y="58" width="0.0" height="0.0"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -303,6 +309,7 @@
                             <constraint firstItem="e4w-Ri-xf9" firstAttribute="top" secondItem="Ykj-cD-zS4" secondAttribute="top" id="5J9-l7-dHo"/>
                             <constraint firstItem="Ykj-cD-zS4" firstAttribute="trailing" secondItem="e4w-Ri-xf9" secondAttribute="trailing" id="6rY-TY-ypj"/>
                             <constraint firstItem="DNS-hU-J8Z" firstAttribute="top" secondItem="Ykj-cD-zS4" secondAttribute="top" constant="16" id="C43-TR-rlA"/>
+                            <constraint firstItem="EFo-Dm-MQv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="K7c-aw-ucJ" secondAttribute="trailing" constant="8" symbolic="YES" id="FmA-4g-R9A"/>
                             <constraint firstItem="rWv-3H-5K5" firstAttribute="leading" secondItem="Ykj-cD-zS4" secondAttribute="leading" id="HFM-9D-VtH"/>
                             <constraint firstItem="EFo-Dm-MQv" firstAttribute="top" secondItem="HJG-aD-WhR" secondAttribute="bottom" constant="8" id="PXW-vl-8z3"/>
                             <constraint firstItem="Ykj-cD-zS4" firstAttribute="bottom" secondItem="Usu-hG-zhL" secondAttribute="bottom" constant="20" id="Qrb-S7-Awf"/>
@@ -314,6 +321,9 @@
                             <constraint firstItem="Ykj-cD-zS4" firstAttribute="trailing" secondItem="EFo-Dm-MQv" secondAttribute="trailing" constant="20" id="dwa-xX-mgt"/>
                             <constraint firstItem="DNS-hU-J8Z" firstAttribute="leading" secondItem="Ykj-cD-zS4" secondAttribute="leading" constant="16" id="e4S-Bx-EZO"/>
                             <constraint firstItem="rWv-3H-5K5" firstAttribute="trailing" secondItem="Ykj-cD-zS4" secondAttribute="trailing" id="esq-oe-Pei"/>
+                            <constraint firstItem="HJG-aD-WhR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DNS-hU-J8Z" secondAttribute="trailing" constant="8" symbolic="YES" id="hee-dP-gtL"/>
+                            <constraint firstItem="K7c-aw-ucJ" firstAttribute="leading" secondItem="Ykj-cD-zS4" secondAttribute="leading" constant="16" id="jpJ-La-OtT"/>
+                            <constraint firstItem="K7c-aw-ucJ" firstAttribute="top" secondItem="DNS-hU-J8Z" secondAttribute="bottom" constant="16" id="k8g-0T-Iwb"/>
                             <constraint firstItem="Ykj-cD-zS4" firstAttribute="bottom" secondItem="kl7-Fa-v90" secondAttribute="bottom" constant="70" id="mtW-KN-rX9"/>
                             <constraint firstItem="Ykj-cD-zS4" firstAttribute="bottom" secondItem="e4w-Ri-xf9" secondAttribute="bottom" id="oCe-N7-1Kn"/>
                             <constraint firstItem="e4w-Ri-xf9" firstAttribute="leading" secondItem="Ykj-cD-zS4" secondAttribute="leading" id="qso-O6-Liy"/>
@@ -329,6 +339,7 @@
                         <outlet property="lblAikaMain" destination="jIc-au-sdt" id="CTo-yn-JB0"/>
                         <outlet property="lblAnalysis" destination="DNS-hU-J8Z" id="0i7-f7-eF5"/>
                         <outlet property="lblProgress" destination="TYy-sl-5xe" id="SlR-Y6-mQ9"/>
+                        <outlet property="lblSoundAnalysis" destination="K7c-aw-ucJ" id="UDa-ty-KrG"/>
                         <outlet property="lblSpeechRecognizer" destination="zLr-z5-iW1" id="kXL-tc-Uno"/>
                         <outlet property="lblTimer" destination="r9d-ux-sGo" id="h8M-m2-Ugt"/>
                         <outlet property="sceneView" destination="rWv-3H-5K5" id="v2G-HW-skS"/>
@@ -513,14 +524,14 @@ Manual Instructions</string>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <mutableString key="content">Aika is built exclusively to train your public speaking skill.
+                                                <string key="content">Aika is built exclusively to train your public speaking skill.
 
 You can talk/speech after choosing which method do you want to train and Aika will recognize your expression, eye movement, and articulation during training. 
 At the end each session, you will be given result of your performance and AIKA will give a feedback for you! 
 -----------------------------------------------------
  Aika has 5 default interactions
 
-</mutableString>
+</string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" size="12" name="SFPro-Regular"/>
@@ -709,6 +720,14 @@ Aika will detect whether you have been stop speaking or not, and you have to cho
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yJe-Xn-A5Q">
+                                        <rect key="frame" x="300" y="101" width="30" height="12.5"/>
+                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="mEZ-kr-wCo"/>
+                                            <constraint firstAttribute="height" constant="16" id="n6D-D3-za4"/>
+                                        </constraints>
+                                    </imageView>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ein-2n-y03">
                                         <rect key="frame" x="281" y="52.5" width="51" height="31"/>
                                         <connections>
@@ -739,20 +758,46 @@ Aika will detect whether you have been stop speaking or not, and you have to cho
                                             <segue destination="1SQ-bW-4Fv" kind="unwind" unwindAction="unwind:" id="f9n-O6-IFb"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKa-hq-Syw" customClass="DesignableView" customModule="Aika" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="92" width="270" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="33t-8O-Q7a"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                                        <state key="normal" title="Speech classification"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="Qpu-63-2tg" kind="show" id="oEM-qB-MVJ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="e1M-x0-MUt" firstAttribute="top" secondItem="Jca-sB-y8g" secondAttribute="top" constant="20" id="0Uo-WG-g4o"/>
+                                    <constraint firstItem="hKa-hq-Syw" firstAttribute="leading" secondItem="qf6-qc-VBj" secondAttribute="leading" id="3Ov-Td-J6T"/>
+                                    <constraint firstItem="yJe-Xn-A5Q" firstAttribute="leading" secondItem="hKa-hq-Syw" secondAttribute="trailing" constant="10" id="7qK-UV-LpP"/>
                                     <constraint firstItem="2v6-Pp-zUu" firstAttribute="centerX" secondItem="Jca-sB-y8g" secondAttribute="centerX" id="Di4-FE-XEl"/>
                                     <constraint firstAttribute="trailing" secondItem="ein-2n-y03" secondAttribute="trailing" constant="20" id="Dvf-5S-Nra"/>
                                     <constraint firstAttribute="trailing" secondItem="aGA-mS-tbW" secondAttribute="trailing" id="Jfs-nQ-ElU"/>
                                     <constraint firstItem="aGA-mS-tbW" firstAttribute="leading" secondItem="Jca-sB-y8g" secondAttribute="leading" id="KvI-d6-R25"/>
+                                    <constraint firstItem="yJe-Xn-A5Q" firstAttribute="centerY" secondItem="hKa-hq-Syw" secondAttribute="centerY" id="N95-r3-bMD"/>
                                     <constraint firstAttribute="bottom" secondItem="2v6-Pp-zUu" secondAttribute="bottom" constant="20" id="S1P-cm-hcj"/>
                                     <constraint firstItem="ein-2n-y03" firstAttribute="centerY" secondItem="qf6-qc-VBj" secondAttribute="centerY" id="U5L-3v-H3h"/>
                                     <constraint firstItem="e1M-x0-MUt" firstAttribute="leading" secondItem="Jca-sB-y8g" secondAttribute="leading" constant="20" id="ZwR-pC-eeH"/>
                                     <constraint firstItem="qf6-qc-VBj" firstAttribute="leading" secondItem="aGA-mS-tbW" secondAttribute="leading" constant="20" id="cW1-Td-rBo"/>
                                     <constraint firstItem="aGA-mS-tbW" firstAttribute="top" secondItem="Jca-sB-y8g" secondAttribute="top" id="ftP-n3-G1b"/>
+                                    <constraint firstItem="yJe-Xn-A5Q" firstAttribute="trailing" secondItem="ein-2n-y03" secondAttribute="trailing" id="mY2-Fv-TWE"/>
                                     <constraint firstItem="qf6-qc-VBj" firstAttribute="top" secondItem="e1M-x0-MUt" secondAttribute="bottom" constant="24" id="pLn-9e-W9Y"/>
+                                    <constraint firstItem="hKa-hq-Syw" firstAttribute="top" secondItem="qf6-qc-VBj" secondAttribute="bottom" constant="16" id="sfe-gG-rcc"/>
                                     <constraint firstAttribute="height" constant="300" id="te6-S9-Cpv"/>
                                     <constraint firstAttribute="trailing" secondItem="e1M-x0-MUt" secondAttribute="trailing" constant="20" id="tfS-w2-74Q"/>
                                     <constraint firstAttribute="bottom" secondItem="aGA-mS-tbW" secondAttribute="bottom" id="vf5-Pa-udp"/>
@@ -779,6 +824,140 @@ Aika will detect whether you have been stop speaking or not, and you have to cho
             </objects>
             <point key="canvasLocation" x="199" y="1361"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JqX-IN-sIf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qpu-63-2tg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="oNa-XY-WVA"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kh5-Ta-Oj5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AJ1-SK-nfE" kind="relationship" relationship="rootViewController" id="42S-ic-Ebu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tNy-lS-3dm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1569.5652173913045" y="1228.7946428571429"/>
+        </scene>
+        <!--Add train data-->
+        <scene sceneID="34j-p0-3T4">
+            <objects>
+                <viewController storyboardIdentifier="AddTraindataViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XiJ-iI-vjc" customClass="AddTraindataViewController" customModule="Aika" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zgA-oG-P09">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="BmK-Hg-62v"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add train data" id="H6V-k1-dAV">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="MCb-dn-dY0">
+                            <connections>
+                                <segue destination="1Ae-b6-PgK" kind="unwind" unwindAction="unwindToSetting:" id="S1e-tS-277"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oc2-UE-4Ig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="1Ae-b6-PgK" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3174" y="1229"/>
+        </scene>
+        <!--Speech Classification-->
+        <scene sceneID="M8T-m4-xwc">
+            <objects>
+                <tableViewController id="AJ1-SK-nfE" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="anF-WT-rOh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Excited" id="vzf-i5-KCf">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="e9k-T7-wfL">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e9k-T7-wfL" id="Ngw-0C-USm">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oBN-UA-Ddh">
+                                        <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oBN-UA-Ddh" id="Im0-gZ-oP3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6Vy-WJ-Mrq">
+                                        <rect key="frame" x="0.0" y="115" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Vy-WJ-Mrq" id="7Z0-nq-duk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Neutral" id="TVX-qU-Zmg">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Hir-dZ-OoA">
+                                        <rect key="frame" x="0.0" y="214.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hir-dZ-OoA" id="C36-WW-uHk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gOL-Vu-ydb">
+                                        <rect key="frame" x="0.0" y="258" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gOL-Vu-ydb" id="ELM-lO-BFV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5xm-Ny-D7y">
+                                        <rect key="frame" x="0.0" y="301.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5xm-Ny-D7y" id="DxI-BM-daM">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="AJ1-SK-nfE" id="0Y9-lq-GWh"/>
+                            <outlet property="delegate" destination="AJ1-SK-nfE" id="DGc-g1-Z7y"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Speech Classification" id="3R3-df-rbm">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="bad-f2-5UN">
+                            <connections>
+                                <segue destination="HJ0-O9-J96" kind="unwind" unwindAction="unwindToSetting:" id="zcf-4o-MIs"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Train" id="FKL-V3-bEd">
+                            <connections>
+                                <segue destination="XiJ-iI-vjc" kind="show" id="cde-Vb-yNX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIx-zX-DLg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="HJ0-O9-J96" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2336" y="1229"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="2v6-Pp-zUu">
@@ -802,12 +981,16 @@ Aika will detect whether you have been stop speaking or not, and you have to cho
         <designable name="hIC-uk-L9a">
             <size key="intrinsicContentSize" width="65" height="14"/>
         </designable>
+        <designable name="hKa-hq-Syw">
+            <size key="intrinsicContentSize" width="136" height="15"/>
+        </designable>
         <designable name="vEv-Eh-Wtf">
             <size key="intrinsicContentSize" width="102" height="26"/>
         </designable>
     </designables>
     <resources>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="normal" width="376" height="646"/>

@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var icAika: UIImageView!
     @IBOutlet weak var lblAnalysis: UILabel!
     @IBOutlet weak var viewMain: UIView!
+    @IBOutlet weak var lblSoundAnalysis: UILabel!
     
     @IBOutlet weak var imgProgress: UIImageView!
     @IBOutlet weak var circularProgressBar: UIView!
@@ -41,20 +42,26 @@ class MainViewController: UIViewController {
     let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
     var request = SFSpeechAudioBufferRecognitionRequest()
     var recognitionTask: SFSpeechRecognitionTask?
+//    var inputFormat: AVAudioFormat!
+    var analyzer: SNAudioStreamAnalyzer!
+    var resultsObserver = ResultsObserver()
+    let analysisQueue = DispatchQueue(label: "com.apple.AnalysisQueue")
+    var soundClassifier: EmotionModel!
     
-    // MARK: Speech recognition, Audio recording, Speech Analysis
+    // MARK: Variables
     var isRecording = false
     var analysis = ""
     var speechText = ""
     var continueSpeaking = false
     var silenceTimer: Float = 0.0
     var lowPassResults: Float = 0.0
-    
+
     // MARK: Face Recognition
     var expression = Expression()
     var isSmiling = false
     var isLookOut = false
-    
+    var isExcited = false
+
     // MARK: Timers
     weak var expressionTimer: Timer?
     weak var waveFormTimer: Timer?
@@ -74,7 +81,11 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        do {
+            try soundClassifier = .init(configuration: MLModelConfiguration.init())
+        } catch {
+            print("Error")
+        }
         initFaceRecognition()
         setupTaskMode()
     }
@@ -85,13 +96,10 @@ class MainViewController: UIViewController {
         storkeLayer.strokeColor = UIColor.white.cgColor
         storkeLayer.lineWidth = 2
         
-        // Create a rounded rect path using button's bounds.
-        storkeLayer.path = CGPath.init(roundedRect: self.circularProgressBar.bounds, cornerWidth: 50, cornerHeight: 50, transform: nil) // same path like the empty one ...
+        storkeLayer.path = CGPath.init(roundedRect: self.circularProgressBar.bounds, cornerWidth: 50, cornerHeight: 50, transform: nil)
         
-        // Add layer to the button
         self.circularProgressBar.layer.addSublayer(storkeLayer)
         
-        // Create animation layer and add it to the stroke layer.
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.fromValue = CGFloat(0.0)
         animation.toValue = CGFloat(1.0)
@@ -122,6 +130,7 @@ class MainViewController: UIViewController {
         self.progressAnimation()
         
         var runCount = 0
+        
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             runCount += 1
 

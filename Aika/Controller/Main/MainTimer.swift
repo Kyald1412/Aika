@@ -38,12 +38,13 @@ extension MainViewController {
         }
         if isLookOut {
             self.expression.lookOut += 0.05
-        } else {
-            self.expression.focused += 0.05
+        }
+        if isExcited {
+            self.expression.excited += 0.05
         }
 
-        self.expression.timeSpeaking = String(format: "%.2f", Date().timeIntervalSinceReferenceDate - expressionStartTime)
-        self.lblTimer.text = self.expression.timeSpeaking
+        self.expression.timeSpeaking = Float(Date().timeIntervalSinceReferenceDate - expressionStartTime)
+        self.lblTimer.text = self.expression.timeSpeakingString()
     }
     
     @objc func updateSpeechCountdown() {

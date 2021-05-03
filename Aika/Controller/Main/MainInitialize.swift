@@ -22,6 +22,10 @@ extension MainViewController {
     }
     
     func initSpeechRecognition(){
+        resultsObserver.delegate = self
+//        inputFormat = audioEngine.inputNode.inputFormat(forBus: 0)
+//        analyzer = SNAudioStreamAnalyzer(format: inputFormat)
+
         recordingSession = AVAudioSession.sharedInstance()
         requestSpeechAuthorization()
     }

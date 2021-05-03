@@ -24,8 +24,12 @@ class SettingViewController : UIViewController{
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.offlineRecognitionControl.isOn = Constants.useOnDeviceRecognition
+        
+    }
+    
+    @IBAction func unwindToSetting( _ seg: UIStoryboardSegue) {
         
     }
     

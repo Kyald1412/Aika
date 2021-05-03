@@ -125,15 +125,36 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
             recognitionTask = nil
         }
         
+      
         self.request =  SFSpeechAudioBufferRecognitionRequest()
         let node = audioEngine.inputNode
         
         audioEngine.inputNode.removeTap(onBus: 0)
+
         
         let recordingFormat = node.outputFormat(forBus: 0)
-        node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
-            self.request.append(buffer)
+        
+        analyzer = SNAudioStreamAnalyzer(format: recordingFormat)
+
+        do {
+            let request = try SNClassifySoundRequest(mlModel: self.soundClassifier.model)
+            try analyzer.add(request, withObserver: resultsObserver)
+        } catch {
+            print("Unable to prepare request: \(error.localizedDescription)")
+            return
         }
+        
+        
+        node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, time in
+            self.request.append(buffer)
+            self.analyzer.analyze(buffer, atAudioFramePosition: time.sampleTime)
+        }
+//        audioEngine.inputNode.installTap(onBus: 1, bufferSize: 8000, format: inputFormat) { buffer, time in
+//            self.analysisQueue.async {
+//                self.analyzer.analyze(buffer, atAudioFramePosition: time.sampleTime)
+//            }
+//        }
+//
         audioEngine.prepare()
         do {
             try audioEngine.start()
@@ -170,7 +191,6 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
                 if result.isFinal {
                     // self.sendAlert(title: "Sorry lost connection", message: "Speech recognition is not currently available. Check back at a later time.
                     print("SPEECH IS FINAL")
-                    // Add continuation here when speech recognizer break
                 }
                 
                 let bestString = result.bestTranscription.formattedString
