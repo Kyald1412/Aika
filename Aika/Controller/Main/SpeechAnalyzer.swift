@@ -12,9 +12,13 @@ import SoundAnalysis
 protocol EmotionClassifierDelegate {
     func displayPredictionResult(identifier: String, confidence: Double)
     func setExcited(excited: Bool)
+    func setNeutral(neutral: Bool)
 }
 
 extension MainViewController: EmotionClassifierDelegate {
+    func setNeutral(neutral: Bool) {
+        self.isNeutral = neutral
+    }
     
     func setExcited(excited: Bool) {
         self.isExcited = excited
@@ -30,7 +34,6 @@ extension MainViewController: EmotionClassifierDelegate {
     
 }
 
-
 class ResultsObserver: NSObject, SNResultsObserving {
     var delegate: EmotionClassifierDelegate?
     func request(_ request: SNRequest, didProduce result: SNResult) {
@@ -41,9 +44,15 @@ class ResultsObserver: NSObject, SNResultsObserving {
         
         if classification.identifier == "Excited" &&  confidence > 80 {
             delegate?.setExcited(excited: true)
+            delegate?.setNeutral(neutral: false)
+            delegate?.displayPredictionResult(identifier: classification.identifier, confidence: confidence)
+        } else if classification.identifier == "Neutral" &&  confidence > 80 {
+            delegate?.setExcited(excited: false)
+            delegate?.setNeutral(neutral: true)
             delegate?.displayPredictionResult(identifier: classification.identifier, confidence: confidence)
         } else {
             delegate?.setExcited(excited: false)
+            delegate?.setNeutral(neutral: false)
         }
     }
 }

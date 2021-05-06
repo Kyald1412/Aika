@@ -33,14 +33,15 @@ extension MainViewController {
                         
         if isSmiling {
             self.expression.smiling += 0.05
-        } else {
-            self.expression.neutral += 0.05
         }
         if isLookOut {
             self.expression.lookOut += 0.05
         }
         if isExcited {
             self.expression.excited += 0.05
+        }
+        if isNeutral {
+            self.expression.neutral += 0.05
         }
 
         self.expression.timeSpeaking = Float(Date().timeIntervalSinceReferenceDate - expressionStartTime)

@@ -232,7 +232,7 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
     }
     
     func speechTaskProcessCheck(){
-        if self.lblSpeechRecognizer.text?.count ?? 0 > 0 && silenceTimer > 5 {
+        if self.lblSpeechRecognizer.text?.count ?? 0 > 0 && silenceTimer > 2 {
             self.cancelRecording()
             self.continueSpeaking = false
             self.currentMode = .taskDone
@@ -240,7 +240,7 @@ extension MainViewController: SFSpeechRecognizerDelegate, AVAudioRecorderDelegat
     }
     
     func speechInitialTaskCheck(){
-        if self.lblSpeechRecognizer.text?.count ?? 0 > 0 && silenceTimer > 2 {
+        if self.lblSpeechRecognizer.text?.count ?? 0 > 0 && silenceTimer > 1 {
             self.cancelRecording()
             self.currentMode = .taskOption
         }

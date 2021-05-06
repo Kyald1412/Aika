@@ -19,16 +19,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWv-3H-5K5">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </arscnView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7c-aw-ucJ">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7c-aw-ucJ">
                                 <rect key="frame" x="16" y="96.5" width="41.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNS-hU-J8Z">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNS-hU-J8Z">
                                 <rect key="frame" x="16" y="60" width="41.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -84,10 +84,6 @@
                                     <segue destination="lhr-zx-Oh1" kind="presentation" identifier="showInstructionSegue" modalPresentationStyle="overFullScreen" id="oWp-xE-6Ba"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4w-Ri-xf9">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Usu-hG-zhL">
                                 <rect key="frame" x="314" y="722" width="100" height="120"/>
                                 <constraints>
@@ -187,8 +183,8 @@
                                                     <constraint firstItem="EFk-LW-Z0W" firstAttribute="leading" secondItem="AuL-HU-xDE" secondAttribute="leading" id="a4R-k1-Wry"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aet-8o-vLP">
-                                                <rect key="frame" x="0.0" y="0.0" width="262" height="94"/>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aet-8o-vLP">
+                                                <rect key="frame" x="0.0" y="0.0" width="262" height="0.0"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Cg-ZZ-CPg" customClass="WaveFormView" customModule="Aika" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="262" height="50"/>
@@ -204,7 +200,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xk-0R-kpu" customClass="DesignableView" customModule="Aika" customModuleProvider="target">
-                                                        <rect key="frame" x="191" y="69" width="63" height="25"/>
+                                                        <rect key="frame" x="191" y="-25" width="63" height="25"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="M3d-lY-MIN"/>
@@ -306,14 +302,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ykj-cD-zS4" firstAttribute="trailing" secondItem="HJG-aD-WhR" secondAttribute="trailing" constant="20" id="5Ea-pf-iEa"/>
-                            <constraint firstItem="e4w-Ri-xf9" firstAttribute="top" secondItem="Ykj-cD-zS4" secondAttribute="top" id="5J9-l7-dHo"/>
-                            <constraint firstItem="Ykj-cD-zS4" firstAttribute="trailing" secondItem="e4w-Ri-xf9" secondAttribute="trailing" id="6rY-TY-ypj"/>
                             <constraint firstItem="DNS-hU-J8Z" firstAttribute="top" secondItem="Ykj-cD-zS4" secondAttribute="top" constant="16" id="C43-TR-rlA"/>
                             <constraint firstItem="EFo-Dm-MQv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="K7c-aw-ucJ" secondAttribute="trailing" constant="8" symbolic="YES" id="FmA-4g-R9A"/>
                             <constraint firstItem="rWv-3H-5K5" firstAttribute="leading" secondItem="Ykj-cD-zS4" secondAttribute="leading" id="HFM-9D-VtH"/>
                             <constraint firstItem="EFo-Dm-MQv" firstAttribute="top" secondItem="HJG-aD-WhR" secondAttribute="bottom" constant="8" id="PXW-vl-8z3"/>
                             <constraint firstItem="Ykj-cD-zS4" firstAttribute="bottom" secondItem="Usu-hG-zhL" secondAttribute="bottom" constant="20" id="Qrb-S7-Awf"/>
-                            <constraint firstItem="rWv-3H-5K5" firstAttribute="top" secondItem="Ykj-cD-zS4" secondAttribute="top" id="SLk-Q0-oBO"/>
+                            <constraint firstItem="rWv-3H-5K5" firstAttribute="top" secondItem="HsC-64-ZSB" secondAttribute="top" id="SLk-Q0-oBO"/>
                             <constraint firstItem="Usu-hG-zhL" firstAttribute="leading" secondItem="kl7-Fa-v90" secondAttribute="trailing" id="Sgb-iB-AsX"/>
                             <constraint firstItem="HJG-aD-WhR" firstAttribute="top" secondItem="Ykj-cD-zS4" secondAttribute="top" constant="20" id="TiO-0e-ZPO"/>
                             <constraint firstItem="Ykj-cD-zS4" firstAttribute="trailing" secondItem="Usu-hG-zhL" secondAttribute="trailing" id="Tzs-E8-v9J"/>
@@ -325,9 +319,7 @@
                             <constraint firstItem="K7c-aw-ucJ" firstAttribute="leading" secondItem="Ykj-cD-zS4" secondAttribute="leading" constant="16" id="jpJ-La-OtT"/>
                             <constraint firstItem="K7c-aw-ucJ" firstAttribute="top" secondItem="DNS-hU-J8Z" secondAttribute="bottom" constant="16" id="k8g-0T-Iwb"/>
                             <constraint firstItem="Ykj-cD-zS4" firstAttribute="bottom" secondItem="kl7-Fa-v90" secondAttribute="bottom" constant="70" id="mtW-KN-rX9"/>
-                            <constraint firstItem="Ykj-cD-zS4" firstAttribute="bottom" secondItem="e4w-Ri-xf9" secondAttribute="bottom" id="oCe-N7-1Kn"/>
-                            <constraint firstItem="e4w-Ri-xf9" firstAttribute="leading" secondItem="Ykj-cD-zS4" secondAttribute="leading" id="qso-O6-Liy"/>
-                            <constraint firstItem="rWv-3H-5K5" firstAttribute="bottom" secondItem="Ykj-cD-zS4" secondAttribute="bottom" id="snk-VL-cYm"/>
+                            <constraint firstItem="rWv-3H-5K5" firstAttribute="bottom" secondItem="HsC-64-ZSB" secondAttribute="bottom" id="snk-VL-cYm"/>
                         </constraints>
                     </view>
                     <connections>
@@ -524,14 +516,14 @@ Manual Instructions</string>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <string key="content">Aika is built exclusively to train your public speaking skill.
+                                                <mutableString key="content">Aika is built exclusively to train your public speaking skill.
 
 You can talk/speech after choosing which method do you want to train and Aika will recognize your expression, eye movement, and articulation during training. 
 At the end each session, you will be given result of your performance and AIKA will give a feedback for you! 
 -----------------------------------------------------
  Aika has 5 default interactions
 
-</string>
+</mutableString>
                                                 <attributes>
                                                     <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" size="12" name="SFPro-Regular"/>
@@ -614,10 +606,102 @@ AIKA is listening, you can start talk/speech to begin training
                                             </fragment>
                                             <fragment>
                                                 <string key="content">
-Aika will detect whether you have been stop speaking or not, and you have to choose if you want to continue or not.</string>
+Aika will detect whether you have been stop speaking or not, and you have to choose if you want to continue or not.
+</string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" size="12" name="SFPro-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">-----------------------------------------------------
+
+There are 3 settings that you can access by clicking gear on the upper-right corner
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">
+[Use on-device recognition]
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">When this is set to false, you can only speak for 60s, please calibrate frequently so you can set it true.
+When this is set to true, you can freely speak as much as you can!</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">
+
+[Speech classification]
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">You can train AIKA to better understand your voice emotions
+
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">[Calibration]
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">You can train AIKA to understand you more and let you talk for more than 60s :&gt;
+
+
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="SFPro-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -682,7 +766,7 @@ Aika will detect whether you have been stop speaking or not, and you have to cho
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTy-6Y-V2e" sceneMemberID="firstResponder"/>
                 <exit id="zmx-0u-28F" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-710" y="1361"/>
+            <point key="canvasLocation" x="-1484" y="1361"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="rKv-zG-2Gd">
@@ -779,23 +863,57 @@ Aika will detect whether you have been stop speaking or not, and you have to cho
                                             <segue destination="Qpu-63-2tg" kind="show" id="oEM-qB-MVJ"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1O9-lQ-EXS">
+                                        <rect key="frame" x="300" y="141" width="30" height="12.5"/>
+                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="b2s-TL-Vfb"/>
+                                            <constraint firstAttribute="height" constant="16" id="x8R-yQ-FZr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLl-nP-vnd" customClass="DesignableView" customModule="Aika" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="132" width="270" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="BDK-Vn-pTl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                                        <state key="normal" title="Calibration"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="erj-R9-I3t" kind="show" id="ggt-yM-XuM"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="e1M-x0-MUt" firstAttribute="top" secondItem="Jca-sB-y8g" secondAttribute="top" constant="20" id="0Uo-WG-g4o"/>
                                     <constraint firstItem="hKa-hq-Syw" firstAttribute="leading" secondItem="qf6-qc-VBj" secondAttribute="leading" id="3Ov-Td-J6T"/>
+                                    <constraint firstItem="1O9-lQ-EXS" firstAttribute="trailing" secondItem="yJe-Xn-A5Q" secondAttribute="trailing" id="4sn-4a-AtC"/>
                                     <constraint firstItem="yJe-Xn-A5Q" firstAttribute="leading" secondItem="hKa-hq-Syw" secondAttribute="trailing" constant="10" id="7qK-UV-LpP"/>
                                     <constraint firstItem="2v6-Pp-zUu" firstAttribute="centerX" secondItem="Jca-sB-y8g" secondAttribute="centerX" id="Di4-FE-XEl"/>
                                     <constraint firstAttribute="trailing" secondItem="ein-2n-y03" secondAttribute="trailing" constant="20" id="Dvf-5S-Nra"/>
                                     <constraint firstAttribute="trailing" secondItem="aGA-mS-tbW" secondAttribute="trailing" id="Jfs-nQ-ElU"/>
                                     <constraint firstItem="aGA-mS-tbW" firstAttribute="leading" secondItem="Jca-sB-y8g" secondAttribute="leading" id="KvI-d6-R25"/>
+                                    <constraint firstItem="gLl-nP-vnd" firstAttribute="leading" secondItem="hKa-hq-Syw" secondAttribute="leading" id="Mij-Ci-Z8S"/>
                                     <constraint firstItem="yJe-Xn-A5Q" firstAttribute="centerY" secondItem="hKa-hq-Syw" secondAttribute="centerY" id="N95-r3-bMD"/>
                                     <constraint firstAttribute="bottom" secondItem="2v6-Pp-zUu" secondAttribute="bottom" constant="20" id="S1P-cm-hcj"/>
                                     <constraint firstItem="ein-2n-y03" firstAttribute="centerY" secondItem="qf6-qc-VBj" secondAttribute="centerY" id="U5L-3v-H3h"/>
+                                    <constraint firstItem="gLl-nP-vnd" firstAttribute="top" secondItem="hKa-hq-Syw" secondAttribute="bottom" constant="10" id="Vsb-6r-ebP"/>
                                     <constraint firstItem="e1M-x0-MUt" firstAttribute="leading" secondItem="Jca-sB-y8g" secondAttribute="leading" constant="20" id="ZwR-pC-eeH"/>
                                     <constraint firstItem="qf6-qc-VBj" firstAttribute="leading" secondItem="aGA-mS-tbW" secondAttribute="leading" constant="20" id="cW1-Td-rBo"/>
                                     <constraint firstItem="aGA-mS-tbW" firstAttribute="top" secondItem="Jca-sB-y8g" secondAttribute="top" id="ftP-n3-G1b"/>
+                                    <constraint firstItem="1O9-lQ-EXS" firstAttribute="leading" secondItem="gLl-nP-vnd" secondAttribute="trailing" constant="10" id="jEi-Tg-CYI"/>
                                     <constraint firstItem="yJe-Xn-A5Q" firstAttribute="trailing" secondItem="ein-2n-y03" secondAttribute="trailing" id="mY2-Fv-TWE"/>
+                                    <constraint firstItem="1O9-lQ-EXS" firstAttribute="centerY" secondItem="gLl-nP-vnd" secondAttribute="centerY" id="ngU-6Z-uiR"/>
                                     <constraint firstItem="qf6-qc-VBj" firstAttribute="top" secondItem="e1M-x0-MUt" secondAttribute="bottom" constant="24" id="pLn-9e-W9Y"/>
                                     <constraint firstItem="hKa-hq-Syw" firstAttribute="top" secondItem="qf6-qc-VBj" secondAttribute="bottom" constant="16" id="sfe-gG-rcc"/>
                                     <constraint firstAttribute="height" constant="300" id="te6-S9-Cpv"/>
@@ -837,12 +955,162 @@ Aika will detect whether you have been stop speaking or not, and you have to cho
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="AJ1-SK-nfE" kind="relationship" relationship="rootViewController" id="42S-ic-Ebu"/>
+                        <segue destination="BMg-gO-ktF" kind="relationship" relationship="rootViewController" id="zhG-FV-Txl"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNy-lS-3dm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569.5652173913045" y="1228.7946428571429"/>
+            <point key="canvasLocation" x="1575" y="1361"/>
+        </scene>
+        <!--Calibration-->
+        <scene sceneID="B0N-2X-WRc">
+            <objects>
+                <viewController id="p0v-uY-8vg" customClass="CalibrationViewController" customModule="Aika" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UXU-GT-isT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ubw-6k-bi5">
+                                <rect key="frame" x="314" y="658" width="100" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="gLV-JH-gcw"/>
+                                    <constraint firstAttribute="width" constant="100" id="x0E-vq-Yc0"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4g-an-VhK">
+                                <rect key="frame" x="16" y="638" width="308" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HhA-oV-9Ys" customClass="BubbleShapeView" customModule="Aika" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="308" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" name="viking"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" name="allsports"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Let's be friend" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSy-fb-25X">
+                                        <rect key="frame" x="16" y="16" width="94" height="16"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="HhA-oV-9Ys" firstAttribute="leading" secondItem="s4g-an-VhK" secondAttribute="leading" id="BM3-h4-EYl"/>
+                                    <constraint firstItem="HhA-oV-9Ys" firstAttribute="top" secondItem="s4g-an-VhK" secondAttribute="top" id="I1R-rT-u6C"/>
+                                    <constraint firstItem="CSy-fb-25X" firstAttribute="leading" secondItem="s4g-an-VhK" secondAttribute="leading" constant="16" id="Q6J-yS-gZk"/>
+                                    <constraint firstAttribute="bottom" secondItem="HhA-oV-9Ys" secondAttribute="bottom" id="UNm-9X-MHW"/>
+                                    <constraint firstAttribute="trailing" secondItem="HhA-oV-9Ys" secondAttribute="trailing" id="Zpv-Qo-dLK"/>
+                                    <constraint firstItem="CSy-fb-25X" firstAttribute="top" secondItem="s4g-an-VhK" secondAttribute="top" constant="16" id="bzU-FP-sTS"/>
+                                    <constraint firstAttribute="height" constant="50" id="vcr-cG-sFX"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azI-vP-qm2" customClass="WaveFormView" customModule="Aika" customModuleProvider="target">
+                                <rect key="frame" x="20" y="156" width="374" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="37O-68-ljY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="waveColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BB5-MK-cpw">
+                                <rect key="frame" x="20" y="216" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swG-In-jbU" customClass="DesignableView" customModule="Aika" customModuleProvider="target">
+                                <rect key="frame" x="20" y="226" width="374" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lmf-iC-DmH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                <state key="normal" title="Begin Calibration!">
+                                    <color key="titleColor" name="AccentColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="AccentColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onBeginCalibrating:" destination="p0v-uY-8vg" eventType="touchUpInside" id="POc-2t-a0p"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please speak for the time being" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTz-87-Fp9">
+                                <rect key="frame" x="20" y="121.5" width="178" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2Z-0E-A8k">
+                                <rect key="frame" x="362" y="121.5" width="32" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JP4-y0-qR4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="swG-In-jbU" firstAttribute="centerX" secondItem="JP4-y0-qR4" secondAttribute="centerX" id="1b9-kJ-t5U"/>
+                            <constraint firstAttribute="trailing" secondItem="azI-vP-qm2" secondAttribute="trailing" constant="20" id="55l-Cx-BZc"/>
+                            <constraint firstItem="eTz-87-Fp9" firstAttribute="leading" secondItem="azI-vP-qm2" secondAttribute="leading" id="5Va-tz-UwP"/>
+                            <constraint firstItem="swG-In-jbU" firstAttribute="top" secondItem="BB5-MK-cpw" secondAttribute="bottom" constant="10" id="6et-2r-oqB"/>
+                            <constraint firstItem="azI-vP-qm2" firstAttribute="leading" secondItem="UXU-GT-isT" secondAttribute="leading" constant="20" id="8OQ-pZ-BmD"/>
+                            <constraint firstItem="u2Z-0E-A8k" firstAttribute="trailing" secondItem="azI-vP-qm2" secondAttribute="trailing" id="ATV-1D-bdF"/>
+                            <constraint firstItem="BB5-MK-cpw" firstAttribute="leading" secondItem="azI-vP-qm2" secondAttribute="leading" id="Dtq-1q-Xtw"/>
+                            <constraint firstItem="s4g-an-VhK" firstAttribute="leading" secondItem="JP4-y0-qR4" secondAttribute="leading" constant="16" id="FZK-DR-4yX"/>
+                            <constraint firstItem="BB5-MK-cpw" firstAttribute="top" secondItem="azI-vP-qm2" secondAttribute="bottom" constant="10" id="JXT-BY-HNQ"/>
+                            <constraint firstItem="BB5-MK-cpw" firstAttribute="trailing" secondItem="azI-vP-qm2" secondAttribute="trailing" id="PYi-L6-yvI"/>
+                            <constraint firstItem="JP4-y0-qR4" firstAttribute="bottom" secondItem="ubw-6k-bi5" secondAttribute="bottom" constant="30" id="Tqf-mG-ADs"/>
+                            <constraint firstItem="ubw-6k-bi5" firstAttribute="top" secondItem="s4g-an-VhK" secondAttribute="bottom" constant="-30" id="Umz-Np-I84"/>
+                            <constraint firstItem="azI-vP-qm2" firstAttribute="top" secondItem="JP4-y0-qR4" secondAttribute="top" constant="100" id="akz-JX-cQN"/>
+                            <constraint firstItem="JP4-y0-qR4" firstAttribute="trailing" secondItem="ubw-6k-bi5" secondAttribute="trailing" id="ebX-TS-dCa"/>
+                            <constraint firstItem="azI-vP-qm2" firstAttribute="top" secondItem="u2Z-0E-A8k" secondAttribute="bottom" constant="20" id="fTR-Ik-vze"/>
+                            <constraint firstItem="swG-In-jbU" firstAttribute="leading" secondItem="azI-vP-qm2" secondAttribute="leading" id="geG-7y-oBE"/>
+                            <constraint firstItem="azI-vP-qm2" firstAttribute="top" secondItem="eTz-87-Fp9" secondAttribute="bottom" constant="20" id="kXp-Cq-bqS"/>
+                            <constraint firstItem="ubw-6k-bi5" firstAttribute="leading" secondItem="s4g-an-VhK" secondAttribute="trailing" constant="-10" id="mfe-0i-Xu5"/>
+                            <constraint firstItem="swG-In-jbU" firstAttribute="trailing" secondItem="azI-vP-qm2" secondAttribute="trailing" id="wJJ-Gn-a3L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Calibration" id="rj3-Db-ary">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Sp7-Qv-MpQ">
+                            <connections>
+                                <segue destination="YjI-9S-Ef5" kind="unwind" unwindAction="unwindToSetting:" id="hDb-rW-nng"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="beginCalibrating" destination="swG-In-jbU" id="Qch-de-Ye0"/>
+                        <outlet property="lblSpeechRecognizer" destination="BB5-MK-cpw" id="7aj-SP-tJV"/>
+                        <outlet property="lblTimer" destination="u2Z-0E-A8k" id="OAt-HD-5Y4"/>
+                        <outlet property="onBeginCalibrating" destination="swG-In-jbU" id="v6Q-rS-TIg"/>
+                        <outlet property="waveForm" destination="azI-vP-qm2" id="5gS-GB-1H2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNZ-Yq-FAV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="YjI-9S-Ef5" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2484.057971014493" y="2176.3392857142858"/>
         </scene>
         <!--Add train data-->
         <scene sceneID="34j-p0-3T4">
@@ -851,112 +1119,251 @@ Aika will detect whether you have been stop speaking or not, and you have to cho
                     <view key="view" contentMode="scaleToFill" id="zgA-oG-P09">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpD-tx-YMe" customClass="DesignableView" customModule="Aika" customModuleProvider="target">
+                                <rect key="frame" x="157" y="196.5" width="100" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.074743433489999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="loi-ug-AhJ"/>
+                                    <constraint firstAttribute="height" constant="100" id="srf-Nc-Y9u"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4O-T3-OzN">
+                                <rect key="frame" x="192" y="326.5" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playAudioButtonTapped:" destination="XiJ-iI-vjc" eventType="touchUpInside" id="nQy-YW-7Wp"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iaO-u0-8e2">
+                                <rect key="frame" x="265" y="71" width="129" height="32"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <segments>
+                                    <segment title="Excited"/>
+                                    <segment title="Neutral"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" name="viking"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick classification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DK6-7x-fKI">
+                                <rect key="frame" x="20" y="76" width="135" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="08z-aa-XqX">
+                                <rect key="frame" x="314" y="668" width="100" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="K5n-2F-19g"/>
+                                    <constraint firstAttribute="width" constant="100" id="gju-zl-2LS"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZt-z5-4C2">
+                                <rect key="frame" x="16" y="648" width="308" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Cz-HP-K5a" customClass="BubbleShapeView" customModule="Aika" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="308" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" name="viking"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" name="allsports"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Gimme your best voice!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSM-Dc-fTT">
+                                        <rect key="frame" x="16" y="16" width="152" height="16"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6Cz-HP-K5a" secondAttribute="trailing" id="0IC-sO-EIs"/>
+                                    <constraint firstItem="6Cz-HP-K5a" firstAttribute="top" secondItem="bZt-z5-4C2" secondAttribute="top" id="2y4-kO-Pkx"/>
+                                    <constraint firstItem="6Cz-HP-K5a" firstAttribute="leading" secondItem="bZt-z5-4C2" secondAttribute="leading" id="41A-g8-YdL"/>
+                                    <constraint firstAttribute="height" constant="50" id="4to-sp-EeT"/>
+                                    <constraint firstItem="SSM-Dc-fTT" firstAttribute="leading" secondItem="bZt-z5-4C2" secondAttribute="leading" constant="16" id="Peh-co-6fA"/>
+                                    <constraint firstItem="SSM-Dc-fTT" firstAttribute="top" secondItem="bZt-z5-4C2" secondAttribute="top" constant="16" id="ZND-43-55V"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Cz-HP-K5a" secondAttribute="bottom" id="rod-RC-qNu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="BmK-Hg-62v"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="R4O-T3-OzN" firstAttribute="centerX" secondItem="cpD-tx-YMe" secondAttribute="centerX" id="56I-wi-C2Q"/>
+                            <constraint firstItem="BmK-Hg-62v" firstAttribute="bottom" secondItem="08z-aa-XqX" secondAttribute="bottom" constant="20" id="CAL-zD-nTX"/>
+                            <constraint firstItem="BmK-Hg-62v" firstAttribute="trailing" secondItem="iaO-u0-8e2" secondAttribute="trailing" constant="20" id="Cfp-1f-dEI"/>
+                            <constraint firstItem="08z-aa-XqX" firstAttribute="trailing" secondItem="BmK-Hg-62v" secondAttribute="trailing" id="E0Z-hl-vrp"/>
+                            <constraint firstItem="DK6-7x-fKI" firstAttribute="top" secondItem="BmK-Hg-62v" secondAttribute="top" constant="20" id="Qf8-ce-5RB"/>
+                            <constraint firstItem="R4O-T3-OzN" firstAttribute="top" secondItem="cpD-tx-YMe" secondAttribute="bottom" constant="30" id="SiP-jG-PLm"/>
+                            <constraint firstItem="cpD-tx-YMe" firstAttribute="top" secondItem="DK6-7x-fKI" secondAttribute="bottom" constant="100" id="Uwh-Zy-oGM"/>
+                            <constraint firstItem="bZt-z5-4C2" firstAttribute="leading" secondItem="BmK-Hg-62v" secondAttribute="leading" constant="16" id="XnV-hk-Qot"/>
+                            <constraint firstItem="08z-aa-XqX" firstAttribute="top" secondItem="bZt-z5-4C2" secondAttribute="bottom" constant="-30" id="jQV-gZ-EFb"/>
+                            <constraint firstItem="cpD-tx-YMe" firstAttribute="centerX" secondItem="BmK-Hg-62v" secondAttribute="centerX" id="osG-Jf-KbI"/>
+                            <constraint firstItem="DK6-7x-fKI" firstAttribute="leading" secondItem="BmK-Hg-62v" secondAttribute="leading" constant="20" id="sMr-w7-6Lh"/>
+                            <constraint firstItem="iaO-u0-8e2" firstAttribute="centerY" secondItem="DK6-7x-fKI" secondAttribute="centerY" id="uxw-Bh-cTZ"/>
+                            <constraint firstItem="08z-aa-XqX" firstAttribute="leading" secondItem="bZt-z5-4C2" secondAttribute="trailing" constant="-10" id="vpu-fN-qFI"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add train data" id="H6V-k1-dAV">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="MCb-dn-dY0">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="YBH-he-UtG">
                             <connections>
-                                <segue destination="1Ae-b6-PgK" kind="unwind" unwindAction="unwindToSetting:" id="S1e-tS-277"/>
+                                <action selector="cancelRecord:" destination="XiJ-iI-vjc" id="0EP-8T-bSP"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="MCb-dn-dY0">
+                            <connections>
+                                <action selector="saveRecord:" destination="XiJ-iI-vjc" id="ZwL-VL-DxH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="currentClassification" destination="iaO-u0-8e2" id="MbE-hP-jFc"/>
+                        <outlet property="playButton" destination="R4O-T3-OzN" id="m70-Mq-JOQ"/>
+                        <outlet property="recordButton" destination="cpD-tx-YMe" id="y0d-rS-gFH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oc2-UE-4Ig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="1Ae-b6-PgK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3174" y="1229"/>
+            <point key="canvasLocation" x="3178" y="1361"/>
         </scene>
         <!--Speech Classification-->
-        <scene sceneID="M8T-m4-xwc">
+        <scene sceneID="Snf-2t-9v8">
             <objects>
-                <tableViewController id="AJ1-SK-nfE" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="anF-WT-rOh">
+                <viewController id="BMg-gO-ktF" customClass="TrainingViewController" customModule="Aika" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PUd-fc-aGw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <sections>
-                            <tableViewSection headerTitle="Excited" id="vzf-i5-KCf">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="e9k-T7-wfL">
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rNO-ne-Gqf">
+                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordedSoundCell" id="kG9-Iq-8Wf" customClass="RecordedSoundCell" customModule="Aika" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e9k-T7-wfL" id="Ngw-0C-USm">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kG9-Iq-8Wf" id="APD-T4-wbb">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfq-55-zg4">
+                                                    <rect key="frame" x="379" y="11" width="15" height="22"/>
+                                                    <state key="normal" image="play.fill" catalog="system"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mSv-Zy-ntu">
+                                                    <rect key="frame" x="20" y="22" width="0.0" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mSv-Zy-ntu" firstAttribute="leading" secondItem="APD-T4-wbb" secondAttribute="leading" constant="20" symbolic="YES" id="16Y-vu-cuT"/>
+                                                <constraint firstItem="mSv-Zy-ntu" firstAttribute="centerY" secondItem="APD-T4-wbb" secondAttribute="centerY" id="gaV-c0-46X"/>
+                                                <constraint firstItem="jfq-55-zg4" firstAttribute="centerY" secondItem="APD-T4-wbb" secondAttribute="centerY" id="gjb-Ln-RST"/>
+                                                <constraint firstAttribute="trailing" secondItem="jfq-55-zg4" secondAttribute="trailing" constant="20" symbolic="YES" id="mQ5-Vb-VEr"/>
+                                                <constraint firstItem="jfq-55-zg4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mSv-Zy-ntu" secondAttribute="trailing" constant="10" id="w9a-ei-dNl"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnPlay" destination="jfq-55-zg4" id="Yow-fd-OR9"/>
+                                            <outlet property="lblFIleName" destination="mSv-Zy-ntu" id="c2h-Xg-KBr"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oBN-UA-Ddh">
-                                        <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oBN-UA-Ddh" id="Im0-gZ-oP3">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6Vy-WJ-Mrq">
-                                        <rect key="frame" x="0.0" y="115" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Vy-WJ-Mrq" id="7Z0-nq-duk">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Neutral" id="TVX-qU-Zmg">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Hir-dZ-OoA">
-                                        <rect key="frame" x="0.0" y="214.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hir-dZ-OoA" id="C36-WW-uHk">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gOL-Vu-ydb">
-                                        <rect key="frame" x="0.0" y="258" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gOL-Vu-ydb" id="ELM-lO-BFV">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5xm-Ny-D7y">
-                                        <rect key="frame" x="0.0" y="301.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5xm-Ny-D7y" id="DxI-BM-daM">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="AJ1-SK-nfE" id="0Y9-lq-GWh"/>
-                            <outlet property="delegate" destination="AJ1-SK-nfE" id="DGc-g1-Z7y"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Speech Classification" id="3R3-df-rbm">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="bad-f2-5UN">
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BMg-gO-ktF" id="9fJ-ER-kxX"/>
+                                    <outlet property="delegate" destination="BMg-gO-ktF" id="R2f-4w-jfn"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0P-c5-4tb" customClass="DesignableView" customModule="Aika" customModuleProvider="target">
+                                <rect key="frame" x="20" y="748" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ahH-Mv-wiY"/>
+                                </constraints>
+                                <state key="normal" title="Train AIKA"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="AccentColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="trainData:" destination="BMg-gO-ktF" eventType="touchUpInside" id="3ox-MB-kN8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JOg-bo-1bO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JOg-bo-1bO" firstAttribute="top" secondItem="rNO-ne-Gqf" secondAttribute="top" id="3YZ-pa-al9"/>
+                            <constraint firstItem="a0P-c5-4tb" firstAttribute="leading" secondItem="PUd-fc-aGw" secondAttribute="leading" constant="20" id="5TF-X1-cwr"/>
+                            <constraint firstAttribute="trailing" secondItem="a0P-c5-4tb" secondAttribute="trailing" constant="20" id="85A-We-hbk"/>
+                            <constraint firstItem="JOg-bo-1bO" firstAttribute="leading" secondItem="rNO-ne-Gqf" secondAttribute="leading" id="TRQ-Ct-ih9"/>
+                            <constraint firstItem="JOg-bo-1bO" firstAttribute="trailing" secondItem="rNO-ne-Gqf" secondAttribute="trailing" id="eeR-5A-mNc"/>
+                            <constraint firstItem="JOg-bo-1bO" firstAttribute="bottom" secondItem="rNO-ne-Gqf" secondAttribute="bottom" id="osN-sp-Shd"/>
+                            <constraint firstItem="JOg-bo-1bO" firstAttribute="bottom" secondItem="a0P-c5-4tb" secondAttribute="bottom" constant="20" id="wPR-RN-xCx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Speech Classification" id="U92-hj-waD">
+                        <barButtonItem key="leftBarButtonItem" title="Setting" image="chevron.left" catalog="system" id="e3p-rb-1xj">
                             <connections>
-                                <segue destination="HJ0-O9-J96" kind="unwind" unwindAction="unwindToSetting:" id="zcf-4o-MIs"/>
+                                <action selector="backToSetting:" destination="BMg-gO-ktF" id="xjv-G1-v3I"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Train" id="FKL-V3-bEd">
+                        <barButtonItem key="rightBarButtonItem" title="Add Data" id="ajK-2y-wAT">
                             <connections>
-                                <segue destination="XiJ-iI-vjc" kind="show" id="cde-Vb-yNX"/>
+                                <segue destination="XiJ-iI-vjc" kind="show" id="jfF-Qz-vqW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FIx-zX-DLg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="HJ0-O9-J96" userLabel="Exit" sceneMemberID="exit"/>
+                    <connections>
+                        <outlet property="tableView" destination="rNO-ne-Gqf" id="OSz-Pe-iZJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFl-d3-gJR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2336" y="1229"/>
+            <point key="canvasLocation" x="2412" y="1361"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YOL-JN-cQe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="erj-R9-I3t" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="cLa-uo-Xq4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qhk-LH-3mC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="p0v-uY-8vg" kind="relationship" relationship="rootViewController" id="Qdd-o2-qQN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rAK-ht-igf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573.913043478261" y="2176.3392857142858"/>
         </scene>
     </scenes>
     <designables>
@@ -978,11 +1385,23 @@ Aika will detect whether you have been stop speaking or not, and you have to cho
         <designable name="Q1s-yX-9Hc">
             <size key="intrinsicContentSize" width="113" height="26"/>
         </designable>
+        <designable name="a0P-c5-4tb">
+            <size key="intrinsicContentSize" width="71" height="30"/>
+        </designable>
+        <designable name="cpD-tx-YMe">
+            <size key="intrinsicContentSize" width="65" height="18"/>
+        </designable>
+        <designable name="gLl-nP-vnd">
+            <size key="intrinsicContentSize" width="78" height="15"/>
+        </designable>
         <designable name="hIC-uk-L9a">
             <size key="intrinsicContentSize" width="65" height="14"/>
         </designable>
         <designable name="hKa-hq-Syw">
             <size key="intrinsicContentSize" width="136" height="15"/>
+        </designable>
+        <designable name="swG-In-jbU">
+            <size key="intrinsicContentSize" width="126" height="14"/>
         </designable>
         <designable name="vEv-Eh-Wtf">
             <size key="intrinsicContentSize" width="102" height="26"/>
@@ -990,10 +1409,15 @@ Aika will detect whether you have been stop speaking or not, and you have to cho
     </designables>
     <resources>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="normal" width="376" height="646"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="allsports">
             <color red="0.0" green="0.42745098039215684" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
@@ -1002,6 +1426,9 @@ Aika will detect whether you have been stop speaking or not, and you have to cho
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

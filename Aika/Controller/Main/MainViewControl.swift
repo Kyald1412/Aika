@@ -46,7 +46,7 @@ class MainViewController: UIViewController {
     var analyzer: SNAudioStreamAnalyzer!
     var resultsObserver = ResultsObserver()
     let analysisQueue = DispatchQueue(label: "com.apple.AnalysisQueue")
-    var soundClassifier: EmotionModel!
+    var soundClassifier: EmotionClassifier!
     
     // MARK: Variables
     var isRecording = false
@@ -61,6 +61,7 @@ class MainViewController: UIViewController {
     var isSmiling = false
     var isLookOut = false
     var isExcited = false
+    var isNeutral = false
 
     // MARK: Timers
     weak var expressionTimer: Timer?
@@ -86,6 +87,7 @@ class MainViewController: UIViewController {
         } catch {
             print("Error")
         }
+        self.waveForm.amplitude = 0
         initFaceRecognition()
         setupTaskMode()
     }
@@ -112,6 +114,11 @@ class MainViewController: UIViewController {
     func progressCompleteAnimation(){
         UIView.transition(from: self.circularProgressBar, to: self.imgProgress, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews]) { (bol) in
             self.imgProgress.isHidden = false
+            self.lblProgress.text = ""
+            self.circularProgressBar.isHidden = false
+            self.circularProgressBar.layer.sublayers?.removeLast()
+            self.circularProgressBar.layer.removeAllAnimations()
+
         }
     }
     
@@ -127,6 +134,8 @@ class MainViewController: UIViewController {
         
         self.expression.speechText = self.speechText
         
+        self.speechText = ""
+
         self.progressAnimation()
         
         var runCount = 0

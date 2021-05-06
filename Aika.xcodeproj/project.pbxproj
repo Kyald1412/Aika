@@ -17,13 +17,16 @@
 		BC4A0949263F91A0009C243B /* SpeechAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A0948263F91A0009C243B /* SpeechAnalyzer.swift */; };
 		BC4A0957263FA656009C243B /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A0956263FA638009C243B /* TrainingViewController.swift */; };
 		BC4A095A263FAAD2009C243B /* AddTraindataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A0959263FAAD2009C243B /* AddTraindataViewController.swift */; };
-		BC4A095F263FAFA1009C243B /* EmotionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BC4A095E263FAFA1009C243B /* EmotionModel.mlmodel */; };
 		BC4CA3C32639A2E3002F5C87 /* BubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3C22639A2E3002F5C87 /* BubbleShape.swift */; };
 		BC4CA3C72639AF1D002F5C87 /* MainControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3C62639AF1D002F5C87 /* MainControl.swift */; };
 		BC4CA3CA2639AF44002F5C87 /* SpeechRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3C92639AF44002F5C87 /* SpeechRecognition.swift */; };
 		BC4CA3CE2639AF4E002F5C87 /* FaceRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3CD2639AF4E002F5C87 /* FaceRecognition.swift */; };
 		BC70A5EB2638FD72003624FE /* WaveFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70A5EA2638FD72003624FE /* WaveFormView.swift */; };
+		BC8993232642FF61001FB8AA /* EmotionClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BC8993222642FF61001FB8AA /* EmotionClassifier.mlmodel */; };
 		BC9442F1263A678000D08FF0 /* MainInitialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9442F0263A678000D08FF0 /* MainInitialize.swift */; };
+		BCAD63942642C8DA0031FFB9 /* CalibrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAD63932642C8DA0031FFB9 /* CalibrationViewController.swift */; };
+		BCB1A532264238270061479A /* RecordedSoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB1A531264238270061479A /* RecordedSoundCell.swift */; };
+		BCB1A53526423ABB0061479A /* AKAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB1A53426423ABB0061479A /* AKAudioRecorder.swift */; };
 		BCCFA781263E6C1A00BA08C6 /* EmotionsResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFA780263E6C1A00BA08C6 /* EmotionsResultView.swift */; };
 		BCCFA785263E6C1D00BA08C6 /* SpeechResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFA784263E6C1D00BA08C6 /* SpeechResultView.swift */; };
 		BCCFA789263E6C3200BA08C6 /* SpeechResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCFA788263E6C3200BA08C6 /* SpeechResultView.xib */; };
@@ -34,6 +37,11 @@
 		BCDBD72F2637A58200072DB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCDBD72E2637A58200072DB5 /* Assets.xcassets */; };
 		BCDBD7322637A58200072DB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCDBD7302637A58200072DB5 /* LaunchScreen.storyboard */; };
 		BCE711CD263A526C00DCEA75 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE711CC263A526C00DCEA75 /* UIButton+Extension.swift */; };
+		BCFB56C32640FDCA00F7387C /* SoundDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB56C22640FDCA00F7387C /* SoundDataSet.swift */; };
+		BCFB56C72640FE4500F7387C /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB56C62640FE4500F7387C /* Helpers.swift */; };
+		BCFB56CA2640FF1A00F7387C /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB56C92640FF1A00F7387C /* Labels.swift */; };
+		BCFB56CD2640FF2B00F7387C /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB56CC2640FF2B00F7387C /* Globals.swift */; };
+		BCFB56D02641050200F7387C /* ImagesByLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB56CF2641050200F7387C /* ImagesByLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,13 +55,16 @@
 		BC4A0948263F91A0009C243B /* SpeechAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechAnalyzer.swift; sourceTree = "<group>"; };
 		BC4A0956263FA638009C243B /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		BC4A0959263FAAD2009C243B /* AddTraindataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTraindataViewController.swift; sourceTree = "<group>"; };
-		BC4A095E263FAFA1009C243B /* EmotionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EmotionModel.mlmodel; sourceTree = "<group>"; };
 		BC4CA3C22639A2E3002F5C87 /* BubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleShape.swift; sourceTree = "<group>"; };
 		BC4CA3C62639AF1D002F5C87 /* MainControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControl.swift; sourceTree = "<group>"; };
 		BC4CA3C92639AF44002F5C87 /* SpeechRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognition.swift; sourceTree = "<group>"; };
 		BC4CA3CD2639AF4E002F5C87 /* FaceRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognition.swift; sourceTree = "<group>"; };
 		BC70A5EA2638FD72003624FE /* WaveFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveFormView.swift; sourceTree = "<group>"; };
+		BC8993222642FF61001FB8AA /* EmotionClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EmotionClassifier.mlmodel; sourceTree = "<group>"; };
 		BC9442F0263A678000D08FF0 /* MainInitialize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInitialize.swift; sourceTree = "<group>"; };
+		BCAD63932642C8DA0031FFB9 /* CalibrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationViewController.swift; sourceTree = "<group>"; };
+		BCB1A531264238270061479A /* RecordedSoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedSoundCell.swift; sourceTree = "<group>"; };
+		BCB1A53426423ABB0061479A /* AKAudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKAudioRecorder.swift; sourceTree = "<group>"; };
 		BCCFA780263E6C1A00BA08C6 /* EmotionsResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsResultView.swift; sourceTree = "<group>"; };
 		BCCFA784263E6C1D00BA08C6 /* SpeechResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechResultView.swift; sourceTree = "<group>"; };
 		BCCFA788263E6C3200BA08C6 /* SpeechResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeechResultView.xib; sourceTree = "<group>"; };
@@ -66,6 +77,11 @@
 		BCDBD7312637A58200072DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCDBD7332637A58200072DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE711CC263A526C00DCEA75 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		BCFB56C22640FDCA00F7387C /* SoundDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundDataSet.swift; sourceTree = "<group>"; };
+		BCFB56C62640FE4500F7387C /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		BCFB56C92640FF1A00F7387C /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		BCFB56CC2640FF2B00F7387C /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		BCFB56CF2641050200F7387C /* ImagesByLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesByLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +98,7 @@
 		BC0AD53A263D2D3A0063E2B6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BC8993222642FF61001FB8AA /* EmotionClassifier.mlmodel */,
 				BC0AD53B263D2D430063E2B6 /* Expression.swift */,
 			);
 			path = Models;
@@ -98,8 +115,10 @@
 		BC4A0954263FA2EA009C243B /* Training */ = {
 			isa = PBXGroup;
 			children = (
+				BCB1A52F264237540061479A /* TableCell */,
 				BC4A0959263FAAD2009C243B /* AddTraindataViewController.swift */,
 				BC4A0956263FA638009C243B /* TrainingViewController.swift */,
+				BCB1A53426423ABB0061479A /* AKAudioRecorder.swift */,
 			);
 			path = Training;
 			sourceTree = "<group>";
@@ -126,6 +145,22 @@
 				BC0AD53E263D2D9C0063E2B6 /* MainViewControl.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		BCAD63912642C6CC0031FFB9 /* Calibration */ = {
+			isa = PBXGroup;
+			children = (
+				BCAD63932642C8DA0031FFB9 /* CalibrationViewController.swift */,
+			);
+			path = Calibration;
+			sourceTree = "<group>";
+		};
+		BCB1A52F264237540061479A /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				BCB1A531264238270061479A /* RecordedSoundCell.swift */,
+			);
+			path = TableCell;
 			sourceTree = "<group>";
 		};
 		BCCFA77D263E6BDD00BA08C6 /* Instructions */ = {
@@ -189,7 +224,11 @@
 		BCE8CAC6263A4DB300BC2368 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BC4A095E263FAFA1009C243B /* EmotionModel.mlmodel */,
+				BCFB56C22640FDCA00F7387C /* SoundDataSet.swift */,
+				BCFB56CF2641050200F7387C /* ImagesByLabel.swift */,
+				BCFB56CC2640FF2B00F7387C /* Globals.swift */,
+				BCFB56C92640FF1A00F7387C /* Labels.swift */,
+				BCFB56C62640FE4500F7387C /* Helpers.swift */,
 				BCDBD72B2637A58100072DB5 /* Main.storyboard */,
 				BCDBD72E2637A58200072DB5 /* Assets.xcassets */,
 				BCDBD7302637A58200072DB5 /* LaunchScreen.storyboard */,
@@ -209,13 +248,22 @@
 		BCE8CAC8263A4DD100BC2368 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BCAD63912642C6CC0031FFB9 /* Calibration */,
+				BCFB56BF2640FA6600F7387C /* Settings */,
 				BC4A0954263FA2EA009C243B /* Training */,
 				BCCFA77E263E6BE200BA08C6 /* Result */,
 				BCCFA77D263E6BDD00BA08C6 /* Instructions */,
 				BC9442EF263A677900D08FF0 /* Main */,
-				BC3048A7263DBFCD00B9B31C /* SettingViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BCFB56BF2640FA6600F7387C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BC3048A7263DBFCD00B9B31C /* SettingViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +344,8 @@
 				BC3048A8263DBFCD00B9B31C /* SettingViewController.swift in Sources */,
 				BCDBD7262637A58100072DB5 /* AppDelegate.swift in Sources */,
 				BC4A095A263FAAD2009C243B /* AddTraindataViewController.swift in Sources */,
-				BC4A095F263FAFA1009C243B /* EmotionModel.mlmodel in Sources */,
+				BCFB56CD2640FF2B00F7387C /* Globals.swift in Sources */,
+				BCAD63942642C8DA0031FFB9 /* CalibrationViewController.swift in Sources */,
 				BC4CA3CA2639AF44002F5C87 /* SpeechRecognition.swift in Sources */,
 				BC0AD53C263D2D430063E2B6 /* Expression.swift in Sources */,
 				BC9442F1263A678000D08FF0 /* MainInitialize.swift in Sources */,
@@ -304,14 +353,21 @@
 				BC0AD544263D2E3A0063E2B6 /* Constants.swift in Sources */,
 				BC4A0949263F91A0009C243B /* SpeechAnalyzer.swift in Sources */,
 				BCE711CD263A526C00DCEA75 /* UIButton+Extension.swift in Sources */,
+				BCB1A532264238270061479A /* RecordedSoundCell.swift in Sources */,
+				BCFB56C32640FDCA00F7387C /* SoundDataSet.swift in Sources */,
 				BC0AD533263D1C3E0063E2B6 /* InstructionViewController.swift in Sources */,
 				BC0AD53F263D2D9C0063E2B6 /* MainViewControl.swift in Sources */,
 				BC4CA3C72639AF1D002F5C87 /* MainControl.swift in Sources */,
 				BC4CA3C32639A2E3002F5C87 /* BubbleShape.swift in Sources */,
+				BC8993232642FF61001FB8AA /* EmotionClassifier.mlmodel in Sources */,
+				BCFB56C72640FE4500F7387C /* Helpers.swift in Sources */,
 				BCCFA781263E6C1A00BA08C6 /* EmotionsResultView.swift in Sources */,
+				BCFB56CA2640FF1A00F7387C /* Labels.swift in Sources */,
 				BCDBD7282637A58100072DB5 /* SceneDelegate.swift in Sources */,
 				BC4A0957263FA656009C243B /* TrainingViewController.swift in Sources */,
 				BC4CA3CE2639AF4E002F5C87 /* FaceRecognition.swift in Sources */,
+				BCFB56D02641050200F7387C /* ImagesByLabel.swift in Sources */,
+				BCB1A53526423ABB0061479A /* AKAudioRecorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = YU42ADAZ46;
 				INFOPLIST_FILE = Aika/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -480,7 +536,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = YU42ADAZ46;
 				INFOPLIST_FILE = Aika/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
