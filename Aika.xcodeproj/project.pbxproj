@@ -77,6 +77,7 @@
 		BCDBD7312637A58200072DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCDBD7332637A58200072DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE711CC263A526C00DCEA75 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		BCF5050526575A8D000CA333 /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
 		BCFB56C22640FDCA00F7387C /* SoundDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundDataSet.swift; sourceTree = "<group>"; };
 		BCFB56C62640FE4500F7387C /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		BCFB56C92640FF1A00F7387C /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
@@ -216,6 +217,7 @@
 				BCE8CAC8263A4DD100BC2368 /* Controller */,
 				BCE8CAC6263A4DB300BC2368 /* Resources */,
 				BC4CA3D12639AF65002F5C87 /* Utilites */,
+				BCF5050526575A8D000CA333 /* ExportOptions.plist */,
 				BCDBD7332637A58200072DB5 /* Info.plist */,
 			);
 			path = Aika;
