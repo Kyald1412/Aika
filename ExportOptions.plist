@@ -14,8 +14,6 @@
 	<true/>
 	<key>signingStyle</key>
 	<string>manual</string>
-	<key>signingCertificate</key>
-	<string>iPhone Distribution: Dhiky Aldwiansyah - YU42ADAZ46</string>
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>co.kyald.Aika</key>
