@@ -8,6 +8,7 @@
 import Foundation
 
 struct Constants {
+    
     static var useOnDeviceRecognition = true
     static let analyzeTime = 5.0
     static let dbThreshold:Float = 0.05
