@@ -10,7 +10,7 @@ cp ./scripts/profile/$PROFILE_NAME.mobileprovision ~/Library/MobileDevice/Provis
 echo "*********************"
 echo "*     Archiving     *"
 echo "*********************"
-xcrun xcodebuild -workspace Aika.xcodeproj -scheme Aika\ Stg -archivePath $ARCHIVE_NAME.xcarchive archive
+xcrun xcodebuild -project Aika.xcodeproj -scheme Aika\ Stg -archivePath $ARCHIVE_NAME.xcarchive archive
 echo "**********************"
 echo "*     Exporting      *"
 echo "**********************"
