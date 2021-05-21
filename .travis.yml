@@ -9,6 +9,7 @@ branches:
 env:
   global:
   - APP_NAME="Aika"
+  - 'DEVELOPER_NAME="iPhone Distribution: Dhiky Aldwiansyah - YU42ADAZ46'
   - PROFILE_NAME="Aika"
   - IPA_NAME="Aika"
   - ARCHIVE_NAME="Aika"
